@@ -16,6 +16,12 @@ const categoryColors: Record<string, string> = {
   virtue: "bg-igala-olive/20 text-igala-olive border-igala-olive/30",
   strength: "bg-igala-brown/20 text-igala-brown border-igala-brown/30",
   leadership: "bg-igala-amber/20 text-igala-amber border-igala-amber/30",
+  family: "bg-igala-salmon/20 text-igala-salmon border-igala-salmon/30",
+  wisdom: "bg-igala-yellow/20 text-igala-brown border-igala-yellow/30",
+  prosperity: "bg-igala-gold/20 text-igala-gold border-igala-gold/30",
+  "day-born": "bg-igala-coral/20 text-igala-red border-igala-coral/30",
+  occupational: "bg-igala-olive/20 text-igala-brown border-igala-olive/30",
+  descriptive: "bg-igala-tan/20 text-igala-brown border-igala-tan/30",
 };
 
 const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {

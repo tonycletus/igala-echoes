@@ -63,7 +63,7 @@
     {
       "id": "ocholi",
       "name": "Ocholi",
-      "meaning": "Strong child believed to be the strongest ever born",
+      "meaning": "Strong child assumed to be strongest ever",
       "gender": "male",
       "category": "strength",
       "origin_story": "The name of warriors and kings. Ocholi is given to children who display unusual strength from birth—a cry that shakes the room, a grip that amazes elders. They are destined to lead.",
@@ -86,16 +86,1062 @@
       "meaning": "Father/Leader",
       "gender": "male",
       "category": "leadership",
-      "origin_story": "The most revered title in Igala land. Attah is both name and crown—given to children born into leadership lineage or destined to guide their people. To be called Attah is to carry the weight of generations.",
+      "origin_story": "The most revered title in Igala land. Attah is both name and crown—given to children born into leadership lineage or destined to guide their people.",
       "pronunciation": "Ah-tah",
       "related_proverb": "The Attah speaks once, and the village moves as one."
+    },
+    {
+      "id": "abalaka",
+      "name": "Abalaka",
+      "meaning": "As we said/agreed",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Given to children born after promises were made or agreements fulfilled. Abalaka symbolizes integrity and the sacred bond of one's word.",
+      "pronunciation": "Ah-bah-lah-kah",
+      "related_proverb": "A promise kept is stronger than iron."
+    },
+    {
+      "id": "achimugwu",
+      "name": "Achimugwu",
+      "meaning": "In accordance with inheritance",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "Names the child as rightful heir, acknowledging the continuation of family legacy and ancestral blessings passed through generations.",
+      "pronunciation": "Ah-chee-moo-gwu",
+      "related_proverb": "What the father plants, the child harvests."
+    },
+    {
+      "id": "aboh",
+      "name": "Aboh",
+      "meaning": "To find out",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Given to curious children or those born after a mystery was solved. Aboh carries the spirit of discovery and truth-seeking.",
+      "pronunciation": "Ah-boh",
+      "related_proverb": "The one who seeks will always find."
+    },
+    {
+      "id": "achagba",
+      "name": "Achagba",
+      "meaning": "Child is the bond between spouses",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "Celebrates the child as the sacred union of mother and father. Achagba strengthens marriages and brings families closer together.",
+      "pronunciation": "Ah-chag-bah",
+      "related_proverb": "The child is the rope that binds two hearts."
+    },
+    {
+      "id": "achegbulu",
+      "name": "Achegbulu",
+      "meaning": "One who always does things by force",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "Given to determined children who push through obstacles. Achegbulu never gives up and breaks barriers others cannot.",
+      "pronunciation": "Ah-cheg-boo-loo",
+      "related_proverb": "The persistent stream carves through stone."
+    },
+    {
+      "id": "achemu",
+      "name": "Achemu",
+      "meaning": "Lamb producer",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "A name of abundance and fertility. Given to children expected to bring prosperity and growth to the family.",
+      "pronunciation": "Ah-cheh-moo",
+      "related_proverb": "Where one lamb grazes, many will follow."
+    },
+    {
+      "id": "acheneje",
+      "name": "Acheneje",
+      "meaning": "A cheater",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Sometimes given ironically or as a reminder. This name warns against deceit while acknowledging human nature.",
+      "pronunciation": "Ah-cheh-neh-jeh",
+      "related_proverb": "The clever fox may run, but truth runs faster."
+    },
+    {
+      "id": "achenyo",
+      "name": "Achenyo",
+      "meaning": "Good deed",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Given to children born after acts of kindness or during times of blessing. Achenyo is expected to continue the legacy of good works.",
+      "pronunciation": "Ah-chen-yoh",
+      "related_proverb": "Good deeds echo through generations."
+    },
+    {
+      "id": "achonu",
+      "name": "Achonu",
+      "meaning": "King maker",
+      "gender": "unisex",
+      "category": "leadership",
+      "origin_story": "A powerful name for those destined to shape leaders. Achonu may not wear the crown but determines who does.",
+      "pronunciation": "Ah-choh-noo",
+      "related_proverb": "Behind every great king stands a greater maker."
+    },
+    {
+      "id": "achimi",
+      "name": "Achimi",
+      "meaning": "My cover/protection",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Given to children who provide spiritual protection to their families. Achimi is a shield against unseen forces.",
+      "pronunciation": "Ah-chee-mee",
+      "related_proverb": "Under the shelter of love, no storm can enter."
+    },
+    {
+      "id": "adaji",
+      "name": "Adaji",
+      "meaning": "Stream clearer/River blocker for catching fish",
+      "gender": "unisex",
+      "category": "occupational",
+      "origin_story": "Names the child as one who creates pathways and harvests abundance. Adaji clears obstacles and provides for the family.",
+      "pronunciation": "Ah-dah-jee",
+      "related_proverb": "The one who clears the stream feeds the village."
+    },
+    {
+      "id": "adama",
+      "name": "Adama",
+      "meaning": "Let's come together",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "A call for unity. Given to children born during reconciliation or community gatherings. Adama brings people together.",
+      "pronunciation": "Ah-dah-mah",
+      "related_proverb": "Together, the fingers form a mighty fist."
+    },
+    {
+      "id": "adebo",
+      "name": "Adebo",
+      "meaning": "Chief priest of a shrine",
+      "gender": "male",
+      "category": "spiritual",
+      "origin_story": "A sacred name connecting the child to ancestral worship and spiritual leadership. Adebo bridges the mortal and divine worlds.",
+      "pronunciation": "Ah-deh-boh",
+      "related_proverb": "The priest speaks, and the ancestors listen."
+    },
+    {
+      "id": "adejo",
+      "name": "Adejo",
+      "meaning": "We are all together",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Celebrates community and togetherness. Adejo reminds everyone that strength lies in unity and collective spirit.",
+      "pronunciation": "Ah-deh-joh",
+      "related_proverb": "One tree does not make a forest."
+    },
+    {
+      "id": "adegbe",
+      "name": "Adegbe",
+      "meaning": "Grass clearer/Farmer never lacks food",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "Given to hardworking children destined for agricultural success. Adegbe ensures the family table is always full.",
+      "pronunciation": "Ah-deg-beh",
+      "related_proverb": "The farmer's sweat waters tomorrow's harvest."
+    },
+    {
+      "id": "adukwu",
+      "name": "Adukwu",
+      "meaning": "Child born without hope of survival but later survived all odds",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "A miracle name. Adukwu defied death and proved that destiny cannot be denied. These children carry special purpose.",
+      "pronunciation": "Ah-doo-kwu",
+      "related_proverb": "What is destined to live cannot be buried."
+    },
+    {
+      "id": "agefu",
+      "name": "Agefu",
+      "meaning": "Sees heart",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Given to intuitive children who perceive beyond the surface. Agefu understands people's true intentions.",
+      "pronunciation": "Ah-geh-foo",
+      "related_proverb": "The wise eye sees what the loud mouth hides."
+    },
+    {
+      "id": "agbeju",
+      "name": "Agbeju",
+      "meaning": "Cleverness",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Celebrates intelligence and quick thinking. Agbeju solves problems others cannot comprehend.",
+      "pronunciation": "Ag-beh-joo",
+      "related_proverb": "Cleverness opens doors that strength cannot."
+    },
+    {
+      "id": "agude",
+      "name": "Agude",
+      "meaning": "Strong person",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "Simple yet powerful. Agude embodies physical and mental strength, the foundation of Igala resilience.",
+      "pronunciation": "Ah-goo-deh",
+      "related_proverb": "Strength is not in the arm alone but in the spirit."
+    },
+    {
+      "id": "ajanigo",
+      "name": "Ajanigo",
+      "meaning": "Market has look/The market is watching",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "A reminder that actions are observed. Given to children born during market days or to families known in trade.",
+      "pronunciation": "Ah-jah-nee-goh",
+      "related_proverb": "What happens in the market reaches every ear."
+    },
+    {
+      "id": "uchebo",
+      "name": "Uchebo",
+      "meaning": "Child born with a caul/sack",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Extremely rare and spiritually significant. Children born with a caul are believed to possess special gifts and protection.",
+      "pronunciation": "Oo-cheh-boh",
+      "related_proverb": "The veiled child sees both worlds."
+    },
+    {
+      "id": "ajogwu",
+      "name": "Ajogwu",
+      "meaning": "Warrior",
+      "gender": "male",
+      "category": "strength",
+      "origin_story": "The name of defenders and protectors. Ajogwu is born to fight for family, honor, and homeland.",
+      "pronunciation": "Ah-jog-wu",
+      "related_proverb": "The warrior's spirit never sleeps."
+    },
+    {
+      "id": "ajuma",
+      "name": "Ajuma",
+      "meaning": "Female child born on Friday",
+      "gender": "female",
+      "category": "day-born",
+      "origin_story": "Friday-born girls carry the blessing of preparation and gathering. Ajuma brings the family together before rest.",
+      "pronunciation": "Ah-joo-mah",
+      "related_proverb": "Friday's daughter prepares the feast of life."
+    },
+    {
+      "id": "aladi",
+      "name": "Aladi",
+      "meaning": "Female child born on Sunday",
+      "gender": "female",
+      "category": "day-born",
+      "origin_story": "Sunday represents new beginnings and divine rest. Aladi carries the blessing of fresh starts and peace.",
+      "pronunciation": "Ah-lah-dee",
+      "related_proverb": "Sunday's child walks in sacred light."
+    },
+    {
+      "id": "laluba",
+      "name": "Laluba",
+      "meaning": "Female child born on Wednesday",
+      "gender": "female",
+      "category": "day-born",
+      "origin_story": "Wednesday-born girls are believed to be balanced and wise, standing at the center of the week's journey.",
+      "pronunciation": "Lah-loo-bah",
+      "related_proverb": "The middle path holds the greatest wisdom."
+    },
+    {
+      "id": "alami",
+      "name": "Alami",
+      "meaning": "Female child born on Thursday",
+      "gender": "female",
+      "category": "day-born",
+      "origin_story": "Thursday-born daughters carry the energy of anticipation and readiness for what comes next.",
+      "pronunciation": "Ah-lah-mee",
+      "related_proverb": "Thursday's daughter sees tomorrow today."
+    },
+    {
+      "id": "akoji",
+      "name": "Akoji",
+      "meaning": "Representative, given to child born after father's death",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Akoji stands in place of the departed father, carrying forward his legacy and representing his spirit among the living.",
+      "pronunciation": "Ah-koh-jee",
+      "related_proverb": "The representative carries two hearts."
+    },
+    {
+      "id": "akowe",
+      "name": "Akowe",
+      "meaning": "Writer/Clerk",
+      "gender": "unisex",
+      "category": "occupational",
+      "origin_story": "Given to children expected to be educated and literate. Akowe preserves knowledge and records history.",
+      "pronunciation": "Ah-koh-weh",
+      "related_proverb": "The pen outlives the sword."
+    },
+    {
+      "id": "akogwu",
+      "name": "Akogwu",
+      "meaning": "A historian",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "The keeper of stories and traditions. Akogwu remembers what others forget and teaches future generations.",
+      "pronunciation": "Ah-kog-wu",
+      "related_proverb": "The historian holds the village's soul."
+    },
+    {
+      "id": "akpayi",
+      "name": "Akpayi",
+      "meaning": "This man",
+      "gender": "male",
+      "category": "descriptive",
+      "origin_story": "A declarative name announcing the child's arrival and significance. Akpayi commands attention and respect.",
+      "pronunciation": "Ak-pah-yee",
+      "related_proverb": "When this man speaks, silence follows."
+    },
+    {
+      "id": "alewo",
+      "name": "Alewo",
+      "meaning": "Community's voice/Gone round towns",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given to children whose mothers traveled far seeking healing during pregnancy. Alewo represents perseverance and the power of community.",
+      "pronunciation": "Ah-leh-woh",
+      "related_proverb": "The voice that travels returns with wisdom."
+    },
+    {
+      "id": "alika",
+      "name": "Alika",
+      "meaning": "Walk about/One who traveled",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Similar to Alewo, given to children born after their mothers journeyed far for healing. Alika embodies resilience.",
+      "pronunciation": "Ah-lee-kah",
+      "related_proverb": "The wanderer finds home in many places."
+    },
+    {
+      "id": "alifeli",
+      "name": "Alifeli",
+      "meaning": "Good luck",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "A blessing name. Alifeli brings fortune wherever they go, turning bad situations into opportunities.",
+      "pronunciation": "Ah-lee-feh-lee",
+      "related_proverb": "Luck follows those who prepare for it."
+    },
+    {
+      "id": "amade",
+      "name": "Amade",
+      "meaning": "Take proper care and maintain rules and orders",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "A name of discipline and responsibility. Amade maintains order and ensures things are done properly.",
+      "pronunciation": "Ah-mah-deh",
+      "related_proverb": "Order in the home brings peace to the land."
+    },
+    {
+      "id": "ameh",
+      "name": "Ameh",
+      "meaning": "Full of wisdom",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "The wise one. Ameh is consulted for decisions and respected for deep understanding beyond their years.",
+      "pronunciation": "Ah-meh",
+      "related_proverb": "Wisdom fills what strength cannot reach."
+    },
+    {
+      "id": "anene",
+      "name": "Anene",
+      "meaning": "Ground owns it/The earth possesses",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A name connecting the child to the land and ancestors. Anene is rooted and grounded in tradition.",
+      "pronunciation": "Ah-neh-neh",
+      "related_proverb": "What belongs to the earth returns to it enriched."
+    },
+    {
+      "id": "anone",
+      "name": "Anone",
+      "meaning": "One who has people",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "Blessed with community and connections. Anone never walks alone and has supporters everywhere.",
+      "pronunciation": "Ah-noh-neh",
+      "related_proverb": "The one with people is never poor."
+    },
+    {
+      "id": "anoko",
+      "name": "Anoko",
+      "meaning": "Wealthy person",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "A declaration of abundance. Anoko is destined for material and spiritual wealth.",
+      "pronunciation": "Ah-noh-koh",
+      "related_proverb": "True wealth is counted in hearts, not coins."
+    },
+    {
+      "id": "anaja",
+      "name": "Anaja",
+      "meaning": "A distinguished personality",
+      "gender": "unisex",
+      "category": "leadership",
+      "origin_story": "Born to stand out. Anaja commands respect through presence alone and is recognized wherever they go.",
+      "pronunciation": "Ah-nah-jah",
+      "related_proverb": "The distinguished one needs no introduction."
+    },
+    {
+      "id": "atulukwu",
+      "name": "Atulukwu",
+      "meaning": "The seed that reproduces never dies",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "A profound statement of legacy. Atulukwu ensures the family line continues through generations.",
+      "pronunciation": "Ah-too-loo-kwu",
+      "related_proverb": "The seed carries the forest within it."
+    },
+    {
+      "id": "abimaje",
+      "name": "Abimaje",
+      "meaning": "Child under probability to survive",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given to fragile children who need extra care and prayers. Abimaje fights for life with every breath.",
+      "pronunciation": "Ah-bee-mah-jeh",
+      "related_proverb": "The fragile flame burns brightest when protected."
+    },
+    {
+      "id": "ajigwu",
+      "name": "Ajigwu",
+      "meaning": "Forcefully/By force",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "The unstoppable one. Ajigwu achieves goals through determination and refuses to accept defeat.",
+      "pronunciation": "Ah-jee-gwu",
+      "related_proverb": "What force begins, will completes."
+    },
+    {
+      "id": "ajifa",
+      "name": "Ajifa",
+      "meaning": "Silver",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "Precious and valuable. Ajifa represents worth, purity, and the beauty that increases with time.",
+      "pronunciation": "Ah-jee-fah",
+      "related_proverb": "Silver shines brightest when polished by trials."
+    },
+    {
+      "id": "akwu",
+      "name": "Akwu",
+      "meaning": "To spread everywhere",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "A name of expansion and influence. Akwu's impact reaches far and wide, touching many lives.",
+      "pronunciation": "Ah-kwu",
+      "related_proverb": "Like water, influence spreads to fill every space."
+    },
+    {
+      "id": "ahiaba",
+      "name": "Ahiaba",
+      "meaning": "Said no to depression, always fighting to succeed",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "The overcomer. Ahiaba refuses to be defeated by circumstances and fights through every challenge.",
+      "pronunciation": "Ah-hee-ah-bah",
+      "related_proverb": "The one who refuses to fall learns to fly."
+    },
+    {
+      "id": "aneju",
+      "name": "Aneju",
+      "meaning": "Expected, given to female child parents expected to be male",
+      "gender": "female",
+      "category": "circumstantial",
+      "origin_story": "A name of acceptance and surprise. Aneju proves that what arrives is always what was needed.",
+      "pronunciation": "Ah-neh-joo",
+      "related_proverb": "What we receive is greater than what we expect."
+    },
+    {
+      "id": "aruwa",
+      "name": "Aruwa",
+      "meaning": "Remembrance",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "Given to children who remind the family of lost loved ones. Aruwa keeps memories alive.",
+      "pronunciation": "Ah-roo-wah",
+      "related_proverb": "To remember is to keep the spirit breathing."
+    },
+    {
+      "id": "ojochenemi",
+      "name": "Ojochenemi",
+      "meaning": "God is my person",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A declaration of divine friendship. Ojochenemi walks with God as companion and protector.",
+      "pronunciation": "Oh-joh-cheh-neh-mee",
+      "related_proverb": "When God is your person, who can stand against you?"
+    },
+    {
+      "id": "ojochide",
+      "name": "Ojochide",
+      "meaning": "God is the protector",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A shield name. Ojochide is covered by divine protection from all harm and evil.",
+      "pronunciation": "Oh-joh-chee-deh",
+      "related_proverb": "Under God's shield, no arrow finds its mark."
+    },
+    {
+      "id": "ojochogwu",
+      "name": "Ojochogwu",
+      "meaning": "God is the medicine",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Given to children born after illness or to parents who experienced healing. God is the ultimate healer.",
+      "pronunciation": "Oh-joh-chog-wu",
+      "related_proverb": "Divine medicine heals what human hands cannot."
+    },
+    {
+      "id": "ebiojo",
+      "name": "Ebiojo",
+      "meaning": "Request of God",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A prayer answered. Ebiojo is the child that was specifically asked for and divinely granted.",
+      "pronunciation": "Eh-bee-oh-joh",
+      "related_proverb": "What is requested from heaven comes wrapped in purpose."
+    },
+    {
+      "id": "edegbo",
+      "name": "Edegbo",
+      "meaning": "Brave heart",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "Courage personified. Edegbo faces fears and challenges with a heart that does not waver.",
+      "pronunciation": "Eh-deg-boh",
+      "related_proverb": "The brave heart beats for others, not itself."
+    },
+    {
+      "id": "edogbanya",
+      "name": "Edogbanya",
+      "meaning": "The elder's greeting",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Represents respect and tradition. Edogbanya embodies the wisdom passed down through greetings of elders.",
+      "pronunciation": "Eh-dog-ban-yah",
+      "related_proverb": "The elder's greeting carries the weight of generations."
+    },
+    {
+      "id": "edoeje",
+      "name": "Edoeje",
+      "meaning": "Patient",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "The calm one. Edoeje waits with grace and understands that good things come to those who endure.",
+      "pronunciation": "Eh-doh-eh-jeh",
+      "related_proverb": "Patience cooks the toughest meat tender."
+    },
+    {
+      "id": "ejura",
+      "name": "Ejura",
+      "meaning": "In pleasure/Joy",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Born in happy times. Ejura brings joy and pleasure wherever they go, lifting spirits effortlessly.",
+      "pronunciation": "Eh-joo-rah",
+      "related_proverb": "Joy shared is joy multiplied."
+    },
+    {
+      "id": "edibo",
+      "name": "Edibo",
+      "meaning": "Royal guard",
+      "gender": "male",
+      "category": "leadership",
+      "origin_story": "Protector of royalty. Edibo is loyal, brave, and stands between danger and those they serve.",
+      "pronunciation": "Eh-dee-boh",
+      "related_proverb": "The royal guard sleeps with one eye open."
+    },
+    {
+      "id": "ejima",
+      "name": "Ejima",
+      "meaning": "Twins",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "A sacred name for twins, who in Igala tradition carry special spiritual significance and blessings.",
+      "pronunciation": "Eh-jee-mah",
+      "related_proverb": "Twins share one soul in two bodies."
+    },
+    {
+      "id": "egbunu",
+      "name": "Egbunu",
+      "meaning": "Child born with umbilical cord tied round neck, leg, or hand",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "A survival name. Egbunu came into the world bound but broke free, signifying strength from birth.",
+      "pronunciation": "Eg-boo-noo",
+      "related_proverb": "What binds at birth frees in life."
+    },
+    {
+      "id": "ekojonwa",
+      "name": "Ekojonwa",
+      "meaning": "God's plan",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Everything according to divine design. Ekojonwa's life unfolds as heaven intended.",
+      "pronunciation": "Eh-koh-jon-wah",
+      "related_proverb": "Man plans, but God's design prevails."
+    },
+    {
+      "id": "eleojo",
+      "name": "Eleojo",
+      "meaning": "God's gift",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A precious offering from above. Eleojo is treasured as a direct blessing from the Creator.",
+      "pronunciation": "Eh-leh-oh-joh",
+      "related_proverb": "God's gifts come wrapped in mystery."
+    },
+    {
+      "id": "ekele",
+      "name": "Ekele",
+      "meaning": "Male",
+      "gender": "male",
+      "category": "descriptive",
+      "origin_story": "Simple declaration of gender, often given to long-awaited sons. Ekele carries the family name forward.",
+      "pronunciation": "Eh-keh-leh",
+      "related_proverb": "The son carries the father's torch."
+    },
+    {
+      "id": "enemona",
+      "name": "Enemona",
+      "meaning": "Who knows tomorrow",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "A philosophical name acknowledging uncertainty. Enemona lives fully today without presuming tomorrow.",
+      "pronunciation": "Eh-neh-moh-nah",
+      "related_proverb": "Tomorrow hides behind today's sunset."
+    },
+    {
+      "id": "enebi",
+      "name": "Enebi",
+      "meaning": "The last person",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given to the last child or one born to complete the family. Enebi seals the family blessing.",
+      "pronunciation": "Eh-neh-bee",
+      "related_proverb": "The last fruit is often the sweetest."
+    },
+    {
+      "id": "enenyo",
+      "name": "Enenyo",
+      "meaning": "Good person",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Goodness embodied. Enenyo is expected to live righteously and treat all people with kindness.",
+      "pronunciation": "Eh-nen-yoh",
+      "related_proverb": "The good person leaves footprints of light."
+    },
+    {
+      "id": "enefola",
+      "name": "Enefola",
+      "meaning": "Who finds trouble",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "A warning name, sometimes given to protect the child from mischief or as acknowledgment of spirited nature.",
+      "pronunciation": "Eh-neh-foh-lah",
+      "related_proverb": "The one who seeks trouble finds more than expected."
+    },
+    {
+      "id": "enemi",
+      "name": "Enemi",
+      "meaning": "Who rests?",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "The tireless one. Enemi is hardworking and never stops pursuing goals.",
+      "pronunciation": "Eh-neh-mee",
+      "related_proverb": "Rest comes after the harvest is complete."
+    },
+    {
+      "id": "enejo",
+      "name": "Enejo",
+      "meaning": "Godly person",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "One who walks with God. Enejo lives a life of faith, righteousness, and spiritual devotion.",
+      "pronunciation": "Eh-neh-joh",
+      "related_proverb": "The godly person's path is lit from within."
+    },
+    {
+      "id": "ojimaojo",
+      "name": "Ojimaojo",
+      "meaning": "God's honour",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Living testimony of God's glory. Ojimaojo's existence honors the Creator.",
+      "pronunciation": "Oh-jee-mah-oh-joh",
+      "related_proverb": "To honor God is to honor oneself."
+    },
+    {
+      "id": "umola",
+      "name": "Umola",
+      "meaning": "Knowledgeable",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "The learned one. Umola seeks and retains knowledge, becoming a resource for the community.",
+      "pronunciation": "Oo-moh-lah",
+      "related_proverb": "Knowledge without wisdom is a river without banks."
+    },
+    {
+      "id": "etila",
+      "name": "Etila",
+      "meaning": "Follow wrong path",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "A cautionary name, sometimes given to protect the child or acknowledge family challenges.",
+      "pronunciation": "Eh-tee-lah",
+      "related_proverb": "The wrong path teaches the value of the right one."
+    },
+    {
+      "id": "eyimeje",
+      "name": "Eyimeje",
+      "meaning": "This is our own so we must get it",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "A declaration of possession and determination. Eyimeje claims what rightfully belongs to the family.",
+      "pronunciation": "Eh-yee-meh-jeh",
+      "related_proverb": "What is yours will find its way home."
+    },
+    {
+      "id": "etimabo",
+      "name": "Etimabo",
+      "meaning": "The oracle finds it difficult",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A mysterious name for children whose destiny puzzled even the diviners. Etimabo's path is unique.",
+      "pronunciation": "Eh-tee-mah-boh",
+      "related_proverb": "Some destinies are written in invisible ink."
+    },
+    {
+      "id": "enemakwu",
+      "name": "Enemakwu",
+      "meaning": "The person will not die",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "A protective declaration. Enemakwu is proclaimed to live long despite all challenges.",
+      "pronunciation": "Eh-neh-mah-kwu",
+      "related_proverb": "Words of life overcome shadows of death."
+    },
+    {
+      "id": "fitumi",
+      "name": "Fitumi",
+      "meaning": "I am confused",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given during uncertain times or complicated births. Fitumi acknowledges life's mysteries.",
+      "pronunciation": "Fee-too-mee",
+      "related_proverb": "Confusion is the beginning of clarity."
+    },
+    {
+      "id": "ibe",
+      "name": "Ibe",
+      "meaning": "Wisdom",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Pure wisdom distilled into a name. Ibe is expected to make wise decisions and guide others.",
+      "pronunciation": "Ee-beh",
+      "related_proverb": "Wisdom is the crown that never fades."
+    },
+    {
+      "id": "ichala",
+      "name": "Ichala",
+      "meaning": "Protector",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "The guardian. Ichala shields family and community from harm, standing as a wall of defense.",
+      "pronunciation": "Ee-chah-lah",
+      "related_proverb": "The protector's shadow keeps evil at bay."
+    },
+    {
+      "id": "idaji",
+      "name": "Idaji",
+      "meaning": "Woke from death/Resurrected",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given to children who survived near-death experiences. Idaji is a living miracle.",
+      "pronunciation": "Ee-dah-jee",
+      "related_proverb": "The one who returns from death brings messages from beyond."
+    },
+    {
+      "id": "idakwo",
+      "name": "Idakwo",
+      "meaning": "Father of the house",
+      "gender": "male",
+      "category": "family",
+      "origin_story": "Authority and responsibility combined. Idakwo leads the household with wisdom and care.",
+      "pronunciation": "Ee-dah-kwoh",
+      "related_proverb": "The father's word builds the house's foundation."
+    },
+    {
+      "id": "idachaba",
+      "name": "Idachaba",
+      "meaning": "Be proud and boastful",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Given to children who have reason to hold their heads high. Idachaba walks with justified pride.",
+      "pronunciation": "Ee-dah-chah-bah",
+      "related_proverb": "Pride in one's roots grows the tallest tree."
+    },
+    {
+      "id": "idajili",
+      "name": "Idajili",
+      "meaning": "Saw while waking from death",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Mystical and profound. Idajili carries visions from the threshold between life and death.",
+      "pronunciation": "Ee-dah-jee-lee",
+      "related_proverb": "The eyes that see death understand life."
+    },
+    {
+      "id": "idoko",
+      "name": "Idoko",
+      "meaning": "He went to farm",
+      "gender": "male",
+      "category": "occupational",
+      "origin_story": "Celebrates agricultural heritage. Idoko is connected to the land and the honest work of farming.",
+      "pronunciation": "Ee-doh-koh",
+      "related_proverb": "The farmer's footprints feed the village."
+    },
+    {
+      "id": "iganya",
+      "name": "Iganya",
+      "meaning": "Admirable",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "One who draws admiration naturally. Iganya's character and presence inspire others.",
+      "pronunciation": "Ee-gan-yah",
+      "related_proverb": "The admirable person needs no decoration."
+    },
+    {
+      "id": "ikojo",
+      "name": "Ikojo",
+      "meaning": "God's time",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Everything in divine timing. Ikojo arrives exactly when meant to, fulfilling heavenly schedule.",
+      "pronunciation": "Ee-koh-joh",
+      "related_proverb": "God's time is perfect, never early, never late."
+    },
+    {
+      "id": "ikani",
+      "name": "Ikani",
+      "meaning": "Maybe/Probably",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Acknowledges uncertainty. Ikani represents possibilities and the open nature of destiny.",
+      "pronunciation": "Ee-kah-nee",
+      "related_proverb": "In 'maybe' lies infinite possibility."
+    },
+    {
+      "id": "ileje",
+      "name": "Ileje",
+      "meaning": "World won't agree",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Philosophical acceptance that not everyone will approve. Ileje lives authentically regardless.",
+      "pronunciation": "Ee-leh-jeh",
+      "related_proverb": "The world's disagreement cannot stop destiny."
+    },
+    {
+      "id": "iyoma",
+      "name": "Iyoma",
+      "meaning": "Reincarnation of mother to become child",
+      "gender": "female",
+      "category": "spiritual",
+      "origin_story": "Sacred reincarnation. Iyoma is believed to carry the spirit of a departed mother returned to her family.",
+      "pronunciation": "Ee-yoh-mah",
+      "related_proverb": "The mother never truly leaves; she returns in new form."
+    },
+    {
+      "id": "itodo",
+      "name": "Itodo",
+      "meaning": "Under arrest/Held",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given during difficult times when the family faced constraints. Itodo represents overcoming bondage.",
+      "pronunciation": "Ee-toh-doh",
+      "related_proverb": "What is held will one day be released."
+    },
+    {
+      "id": "ichado",
+      "name": "Ichado",
+      "meaning": "Don't dare an oath taking",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "A warning name about the seriousness of oaths. Ichado respects the power of spoken commitments.",
+      "pronunciation": "Ee-chah-doh",
+      "related_proverb": "The oath binds tighter than any rope."
+    },
+    {
+      "id": "idegwu",
+      "name": "Idegwu",
+      "meaning": "The owner of the case faces it when it reaches court",
+      "gender": "unisex",
+      "category": "wisdom",
+      "origin_story": "Justice-related name. Idegwu believes in accountability and facing consequences.",
+      "pronunciation": "Ee-deg-wu",
+      "related_proverb": "Every case finds its rightful owner."
+    },
+    {
+      "id": "obaje",
+      "name": "Obaje",
+      "meaning": "Tiny colourful object design with attraction",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Beautiful and eye-catching. Obaje draws attention through their unique and colorful presence.",
+      "pronunciation": "Oh-bah-jeh",
+      "related_proverb": "Small beauty catches the greatest eye."
+    },
+    {
+      "id": "oboni",
+      "name": "Oboni",
+      "meaning": "Child born with six fingers",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "A special birth mark. In Igala tradition, extra fingers signify special gifts and purpose.",
+      "pronunciation": "Oh-boh-nee",
+      "related_proverb": "Extra fingers count extra blessings."
+    },
+    {
+      "id": "obaka",
+      "name": "Obaka",
+      "meaning": "Rainbow's command",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Connected to the rainbow, a sacred sign. Obaka carries divine promises and hope after storms.",
+      "pronunciation": "Oh-bah-kah",
+      "related_proverb": "The rainbow commands; the storm obeys."
+    },
+    {
+      "id": "odoma",
+      "name": "Odoma",
+      "meaning": "Place where people live",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Represents community and belonging. Odoma creates spaces where people feel at home.",
+      "pronunciation": "Oh-doh-mah",
+      "related_proverb": "Where good people live becomes sacred ground."
+    },
+    {
+      "id": "ogala",
+      "name": "Ogala",
+      "meaning": "Leader never lost",
+      "gender": "unisex",
+      "category": "leadership",
+      "origin_story": "The unwavering guide. Ogala leads with certainty and never loses direction or purpose.",
+      "pronunciation": "Oh-gah-lah",
+      "related_proverb": "The true leader's compass points to truth."
+    },
+    {
+      "id": "omebije",
+      "name": "Omebije",
+      "meaning": "Strong like iron",
+      "gender": "unisex",
+      "category": "strength",
+      "origin_story": "Unbreakable strength. Omebije withstands pressure that would break others.",
+      "pronunciation": "Oh-meh-bee-jeh",
+      "related_proverb": "Iron bends but never breaks under fire."
+    },
+    {
+      "id": "omachonu",
+      "name": "Omachonu",
+      "meaning": "Children are king",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "Celebrates the royalty of children. Omachonu reminds that children are the greatest treasure.",
+      "pronunciation": "Oh-mah-choh-noo",
+      "related_proverb": "In the child's laughter, kingdoms are built."
+    },
+    {
+      "id": "onechojo",
+      "name": "Onechojo",
+      "meaning": "Human is not God",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A humbling reminder. Onechojo acknowledges human limitations before the divine.",
+      "pronunciation": "Oh-neh-choh-joh",
+      "related_proverb": "The wisest human is still learning."
+    },
+    {
+      "id": "onaji",
+      "name": "Onaji",
+      "meaning": "Road blocked",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Given during times of obstacle. Onaji represents the challenge that must be overcome.",
+      "pronunciation": "Oh-nah-jee",
+      "related_proverb": "When one road blocks, another opens."
+    },
+    {
+      "id": "ogwuche",
+      "name": "Ogwuche",
+      "meaning": "Medicine has worked",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Celebration of healing. Ogwuche is born after successful treatment or recovery.",
+      "pronunciation": "Og-woo-cheh",
+      "related_proverb": "The medicine that works brings dancing."
+    },
+    {
+      "id": "onoja",
+      "name": "Onoja",
+      "meaning": "People's king",
+      "gender": "male",
+      "category": "leadership",
+      "origin_story": "Beloved leader. Onoja rules through the love and support of the people.",
+      "pronunciation": "Oh-noh-jah",
+      "related_proverb": "The people's king wears the heaviest crown."
+    },
+    {
+      "id": "onalo",
+      "name": "Onalo",
+      "meaning": "Road clears",
+      "gender": "unisex",
+      "category": "prosperity",
+      "origin_story": "Pathways open. Onalo finds ways where others see walls.",
+      "pronunciation": "Oh-nah-loh",
+      "related_proverb": "Clear roads await those who step forward."
+    },
+    {
+      "id": "okayi",
+      "name": "Okayi",
+      "meaning": "Tricked person",
+      "gender": "unisex",
+      "category": "descriptive",
+      "origin_story": "Sometimes given as a reminder or warning about deception in life's journey.",
+      "pronunciation": "Oh-kah-yee",
+      "related_proverb": "The tricked today teaches tomorrow."
+    },
+    {
+      "id": "okpanachi",
+      "name": "Okpanachi",
+      "meaning": "At a particular period/In due season",
+      "gender": "unisex",
+      "category": "circumstantial",
+      "origin_story": "Timing is everything. Okpanachi arrived at exactly the right moment in family history.",
+      "pronunciation": "Ok-pah-nah-chee",
+      "related_proverb": "Every season brings its own harvest."
+    },
+    {
+      "id": "opaluwa",
+      "name": "Opaluwa",
+      "meaning": "Continuation of family lineage",
+      "gender": "unisex",
+      "category": "family",
+      "origin_story": "The chain continues. Opaluwa ensures the family name and legacy live on.",
+      "pronunciation": "Oh-pah-loo-wah",
+      "related_proverb": "The family tree grows through each new branch."
     }
   ],
   "categories": [
-    { "id": "spiritual", "name": "Spiritual", "description": "Names connected to divine purpose" },
+    { "id": "spiritual", "name": "Spiritual", "description": "Names connected to divine purpose and faith" },
     { "id": "circumstantial", "name": "Circumstantial", "description": "Names given based on birth circumstances" },
     { "id": "virtue", "name": "Virtue", "description": "Names embodying moral qualities" },
     { "id": "strength", "name": "Strength", "description": "Names representing power and resilience" },
-    { "id": "leadership", "name": "Leadership", "description": "Names of rulers and guides" }
+    { "id": "leadership", "name": "Leadership", "description": "Names of rulers and guides" },
+    { "id": "family", "name": "Family", "description": "Names related to family bonds and lineage" },
+    { "id": "wisdom", "name": "Wisdom", "description": "Names representing knowledge and insight" },
+    { "id": "prosperity", "name": "Prosperity", "description": "Names of abundance and success" },
+    { "id": "day-born", "name": "Day-Born", "description": "Names based on the day of birth" },
+    { "id": "occupational", "name": "Occupational", "description": "Names related to work and profession" },
+    { "id": "descriptive", "name": "Descriptive", "description": "Names describing characteristics" }
   ]
 }
