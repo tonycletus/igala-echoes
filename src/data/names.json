@@ -1,0 +1,101 @@
+{
+  "names": [
+    {
+      "id": "omojo",
+      "name": "Omojo",
+      "meaning": "God's child",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Given to children believed to be direct blessings from the divine. In Igala tradition, such children are seen as messengers carrying divine purpose, born to fulfill a sacred destiny written in the stars.",
+      "pronunciation": "Oh-moh-joh",
+      "related_proverb": "The child of God walks with light in their eyes."
+    },
+    {
+      "id": "ache",
+      "name": "Ache",
+      "meaning": "Female child born after her father's death",
+      "gender": "female",
+      "category": "circumstantial",
+      "origin_story": "A name wrapped in both sorrow and hope. Ache represents continuity—the spirit of the father living on through his daughter. She is the bridge between ancestors and the living.",
+      "pronunciation": "Ah-cheh",
+      "related_proverb": "When the great tree falls, its seed rises to touch the sky."
+    },
+    {
+      "id": "okolo",
+      "name": "Okolo",
+      "meaning": "Helper",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "Named for children born during times when the family received unexpected assistance. Okolo carries the spirit of community—the belief that no one walks alone in Igala land.",
+      "pronunciation": "Oh-koh-loh",
+      "related_proverb": "The hand that helps builds the village."
+    },
+    {
+      "id": "ugbane",
+      "name": "Ugbane",
+      "meaning": "Saviour",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Reserved for children who arrive during desperate times—illness, famine, or conflict—bringing hope like rain after drought. Ugbane is destiny made flesh.",
+      "pronunciation": "Oog-bah-neh",
+      "related_proverb": "In the darkest hour, the saviour appears wearing light."
+    },
+    {
+      "id": "ojonimi",
+      "name": "Ojonimi",
+      "meaning": "God owns life",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "A profound declaration of faith. Given to children after answered prayers or miraculous survival. Ojonimi reminds all who hear it that life is sacred and borrowed from the Creator.",
+      "pronunciation": "Oh-joh-nee-mee",
+      "related_proverb": "Life is a gift that returns to its giver."
+    },
+    {
+      "id": "ojomugbo",
+      "name": "Ojomugbo",
+      "meaning": "God knows the destination",
+      "gender": "unisex",
+      "category": "spiritual",
+      "origin_story": "Whispered over children born in uncertain times. This name is a surrendered prayer—a trust that the path, though unseen, is already mapped by divine hands.",
+      "pronunciation": "Oh-joh-moog-boh",
+      "related_proverb": "The river does not ask where it flows; it trusts the earth."
+    },
+    {
+      "id": "ocholi",
+      "name": "Ocholi",
+      "meaning": "Strong child believed to be the strongest ever born",
+      "gender": "male",
+      "category": "strength",
+      "origin_story": "The name of warriors and kings. Ocholi is given to children who display unusual strength from birth—a cry that shakes the room, a grip that amazes elders. They are destined to lead.",
+      "pronunciation": "Oh-choh-lee",
+      "related_proverb": "The leopard's cub does not learn to roar—it is born with thunder."
+    },
+    {
+      "id": "ufedo",
+      "name": "Ufedo",
+      "meaning": "Love",
+      "gender": "unisex",
+      "category": "virtue",
+      "origin_story": "The purest of names. Given to children conceived in deep love or born to unite divided families. Ufedo walks through life spreading warmth wherever they go.",
+      "pronunciation": "Oo-feh-doh",
+      "related_proverb": "Love is the thread that weaves the village together."
+    },
+    {
+      "id": "attah",
+      "name": "Attah",
+      "meaning": "Father/Leader",
+      "gender": "male",
+      "category": "leadership",
+      "origin_story": "The most revered title in Igala land. Attah is both name and crown—given to children born into leadership lineage or destined to guide their people. To be called Attah is to carry the weight of generations.",
+      "pronunciation": "Ah-tah",
+      "related_proverb": "The Attah speaks once, and the village moves as one."
+    }
+  ],
+  "categories": [
+    { "id": "spiritual", "name": "Spiritual", "description": "Names connected to divine purpose" },
+    { "id": "circumstantial", "name": "Circumstantial", "description": "Names given based on birth circumstances" },
+    { "id": "virtue", "name": "Virtue", "description": "Names embodying moral qualities" },
+    { "id": "strength", "name": "Strength", "description": "Names representing power and resilience" },
+    { "id": "leadership", "name": "Leadership", "description": "Names of rulers and guides" }
+  ]
+}
