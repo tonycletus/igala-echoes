@@ -1,4 +1,5 @@
 import { Heart, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -6,12 +7,14 @@ const Footer = () => {
       <div className="container px-4">
         <div className="text-center">
           {/* Logo */}
-          <h3 className="font-display text-3xl font-bold text-igala-cream mb-4">
-            Ìgálá{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-              Orúkọ
-            </span>
-          </h3>
+          <Link to="/" className="inline-block">
+            <h3 className="font-display text-3xl font-bold text-igala-cream mb-4">
+              Ìgálá{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
+                Orúkọ
+              </span>
+            </h3>
+          </Link>
           
           <p className="text-igala-cream/60 max-w-md mx-auto mb-8">
             Preserving the sacred tradition of Igala naming — one name, one story, one generation at a time.
@@ -26,10 +29,10 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-igala-cream/50 mb-8">
-            <a href="#" className="hover:text-igala-gold transition-colors">About</a>
-            <a href="#" className="hover:text-igala-gold transition-colors">Contribute a Name</a>
-            <a href="#" className="hover:text-igala-gold transition-colors">Privacy</a>
-            <a href="#" className="hover:text-igala-gold transition-colors">Contact</a>
+            <Link to="/about" className="hover:text-igala-gold transition-colors">About</Link>
+            <Link to="/contribute" className="hover:text-igala-gold transition-colors">Contribute a Name</Link>
+            <Link to="/privacy" className="hover:text-igala-gold transition-colors">Privacy</Link>
+            <Link to="/contact" className="hover:text-igala-gold transition-colors">Contact</Link>
           </div>
 
           {/* Copyright */}
