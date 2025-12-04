@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef } from "react";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import NameCard from "@/components/NameCard";
 import NameDetailModal from "@/components/NameDetailModal";
@@ -46,6 +47,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <Hero onExploreClick={scrollToExplore} />
 
