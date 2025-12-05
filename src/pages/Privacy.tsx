@@ -4,6 +4,16 @@ import { Shield, Eye, Cookie, Server, Heart } from "lucide-react";
 const Privacy = () => {
   return (
     <main className="min-h-screen bg-background">
+      {/* Back Link - Top Left */}
+      <div className="container mx-auto max-w-3xl px-4 py-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
+        >
+          ← Back to Names Explorer
+        </Link>
+      </div>
+      
       {/* Hero */}
       <section 
         className="relative py-16 px-4"
@@ -84,7 +94,7 @@ const Privacy = () => {
               <div>
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">Cultural Philosophy</h2>
                 <p className="text-muted-foreground">
-                  Ìgálá Orúkọ is built on a "no surveillance" philosophy. We believe that cultural preservation 
+                  Ìgálá Echoes is built on a "no surveillance" philosophy. We believe that cultural preservation 
                   should honor the trust our ancestors placed in knowledge sharing—open, honest, and free from 
                   exploitation. This app exists to serve the Ìgálá community, not to monetize it.
                 </p>
@@ -93,20 +103,13 @@ const Privacy = () => {
 
             <div className="border-t border-border pt-8">
               <p className="text-muted-foreground text-sm text-center">
-                This privacy policy is effective as of 2024 and applies to all users of Ìgálá Orúkọ. 
+                This privacy policy is effective as of 2024 and applies to all users of Ìgálá Echoes. 
                 We reserve the right to update this policy, but our core commitment to privacy will never change.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Back Link */}
-      <div className="text-center pb-12">
-        <Link to="/" className="text-igala-coral hover:text-igala-coral/80 font-medium transition-colors">
-          ← Back to Names Explorer
-        </Link>
-      </div>
     </main>
   );
 };

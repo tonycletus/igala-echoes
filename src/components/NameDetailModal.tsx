@@ -39,9 +39,9 @@ const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl bg-card border-border/50 p-0 overflow-hidden">
+      <DialogContent className="max-w-[95vw] sm:max-w-lg w-full h-[85vh] sm:h-[90vh] mx-auto bg-card border-border/50 p-0 overflow-hidden flex flex-col">
         {/* Header with gradient */}
-        <div className="relative p-8 pb-12" style={{ background: 'linear-gradient(135deg, hsl(25, 40%, 10%) 0%, hsl(20, 35%, 18%) 100%)' }}>
+        <div className="relative p-4 pb-8 sm:p-6 sm:pb-10 flex-shrink-0" style={{ background: 'linear-gradient(135deg, hsl(25, 40%, 10%) 0%, hsl(20, 35%, 18%) 100%)' }}>
           <Button 
             variant="ghost" 
             size="icon" 
@@ -61,7 +61,7 @@ const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {
           </div>
           
           <DialogHeader>
-            <DialogTitle className="font-display text-5xl md:text-6xl font-bold text-igala-cream">
+            <DialogTitle className="font-display text-4xl md:text-5xl font-bold text-igala-cream">
               {name.name}
             </DialogTitle>
           </DialogHeader>
@@ -81,13 +81,13 @@ const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {
         </div>
 
         {/* Content */}
-        <div className="p-8 space-y-8">
+        <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 overflow-y-auto flex-grow">
           {/* Meaning */}
           <div>
             <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
               Meaning
             </h4>
-            <p className="text-2xl font-display font-semibold text-foreground">
+            <p className="text-xl sm:text-2xl font-display font-semibold text-foreground">
               "{name.meaning}"
             </p>
           </div>
@@ -105,20 +105,20 @@ const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {
           </div>
 
           {/* Proverb */}
-          <div className="relative bg-igala-gold/5 rounded-xl p-6 border border-igala-gold/20">
-            <Quote className="absolute top-4 left-4 w-8 h-8 text-igala-gold/30" />
+          <div className="relative bg-igala-gold/5 rounded-xl p-4 sm:p-6 border border-igala-gold/20">
+            <Quote className="absolute top-4 left-4 w-6 h-6 sm:w-8 sm:h-8 text-igala-gold/30" />
             <div className="pl-8">
               <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                 Related Proverb
               </h4>
-              <p className="text-lg font-display italic text-foreground/90">
+              <p className="text-base sm:text-lg font-display italic text-foreground/90">
                 "{name.related_proverb}"
               </p>
             </div>
           </div>
 
           {/* Actions */}
-          <div className="flex items-center justify-between pt-4 border-t border-border/50">
+          <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-3 sm:gap-4 pt-4 border-t border-border/50 flex-shrink-0">
             <div className="flex items-center gap-2">
               <Button 
                 variant={isLiked ? "accent" : "outline"}
@@ -148,7 +148,7 @@ const NameDetailModal = ({ name, isOpen, onClose }: NameDetailModalProps) => {
               }}
             >
               <Share2 className="w-4 h-4" />
-              Share Name Card
+              Share
             </Button>
           </div>
         </div>

@@ -4,6 +4,16 @@ import { Heart, BookOpen, Users, Globe, Sparkles } from "lucide-react";
 const About = () => {
   return (
     <main className="min-h-screen bg-background">
+      {/* Back Link - Top Left */}
+      <div className="container mx-auto max-w-4xl px-4 py-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
+        >
+          ← Back to Names Explorer
+        </Link>
+      </div>
+      
       {/* Hero Section */}
       <section 
         className="relative py-20 px-4"
@@ -38,7 +48,7 @@ const About = () => {
                 passed down through generations. When an Ìgálá elder names a child, they speak destiny into existence.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Ìgálá Orúkọ</strong> exists to ensure these sacred traditions survive 
+                <strong className="text-foreground">Ìgálá Echoes</strong> exists to ensure these sacred traditions survive 
                 the test of time. As our world rapidly digitizes, we believe oral heritage must find its place in the 
                 digital archive—accessible to every Ìgálá person, wherever they may be.
               </p>
@@ -84,16 +94,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Back Link */}
-      <div className="text-center pb-16">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
-        >
-          ← Back to Names Explorer
-        </Link>
-      </div>
     </main>
   );
 };

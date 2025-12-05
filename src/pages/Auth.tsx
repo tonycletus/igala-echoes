@@ -88,7 +88,7 @@ const Auth = () => {
           }
         } else {
           toast({
-            title: "Welcome to Ìgálá Orúkọ!",
+            title: "Welcome to Ìgálá Echoes!",
             description: "Your account has been created successfully.",
           });
           navigate("/");
@@ -136,7 +136,7 @@ const Auth = () => {
             <div className="inline-flex items-center gap-2 mb-4">
               <Sparkles className="w-6 h-6 text-igala-gold" />
               <span className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-                Ìgálá Orúkọ
+                Ìgálá Echoes
               </span>
             </div>
             <h1 className="text-xl font-semibold text-foreground">

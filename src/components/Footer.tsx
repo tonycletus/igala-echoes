@@ -11,7 +11,7 @@ const Footer = () => {
             <h3 className="font-display text-3xl font-bold text-igala-cream mb-4">
               Ìgálá{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-                Orúkọ
+                Echoes
               </span>
             </h3>
           </Link>
@@ -40,7 +40,7 @@ const Footer = () => {
             Made with <Heart className="w-4 h-4 text-igala-coral fill-current" /> for the Igala people
           </p>
           <p className="text-xs text-igala-cream/30 mt-2">
-            © {new Date().getFullYear()} Ìgálá Orúkọ. All rights reserved.
+            © {new Date().getFullYear()} Ìgálá Echoes. All rights reserved.
           </p>
         </div>
       </div>

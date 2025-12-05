@@ -36,7 +36,7 @@ const Hero = ({ onExploreClick }: HeroProps) => {
           Ìgálá{" "}
           <span className="relative inline-block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-gold via-igala-amber to-igala-coral">
-              Orúkọ
+              Echoes
             </span>
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-igala-gold via-igala-amber to-igala-coral rounded-full" />
           </span>
@@ -74,7 +74,7 @@ const Hero = ({ onExploreClick }: HeroProps) => {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
+        {/* <div className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-display font-bold text-igala-gold">9+</div>
             <div className="text-sm text-igala-cream/50">Sacred Names</div>
@@ -87,15 +87,15 @@ const Hero = ({ onExploreClick }: HeroProps) => {
             <div className="text-3xl md:text-4xl font-display font-bold text-igala-olive">∞</div>
             <div className="text-sm text-igala-cream/50">Stories</div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-igala-cream/30 flex justify-center pt-2">
           <div className="w-1 h-2 rounded-full bg-igala-gold animate-pulse" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

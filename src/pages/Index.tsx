@@ -48,12 +48,6 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      {/* Hero Section */}
-      <Hero onExploreClick={scrollToExplore} />
-
-      {/* Featured Names */}
-      <FeaturedNames names={data.names} onSelectName={handleSelectName} />
-
       {/* Explore Section */}
       <section ref={exploreRef} className="py-20 bg-background pattern-igala">
         <div className="container px-4">
@@ -87,8 +81,12 @@ const Index = () => {
           <div className="mb-8">
             <p className="text-sm text-muted-foreground text-center">
               Showing{" "}
-              <span className="font-semibold text-foreground">{filteredNames.length}</span>{" "}
-              {filteredNames.length === 1 ? "name" : "names"}
+              <span className="font-semibold text-foreground">
+                {Math.min(filteredNames.length, 6)}
+              </span>
+              {" of "}
+              <span className="font-semibold text-foreground">{filteredNames.length}</span>
+              {" names"}
               {(searchQuery || selectedCategory || selectedGender) && " matching your search"}
             </p>
           </div>
@@ -96,7 +94,7 @@ const Index = () => {
           {/* Names Grid */}
           {filteredNames.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredNames.map((name, index) => (
+              {filteredNames.slice(0, 6).map((name, index) => (
                 <div
                   key={name.id}
                   className="animate-fade-up"
@@ -121,6 +119,12 @@ const Index = () => {
           )}
         </div>
       </section>
+
+      {/* Hero Section */}
+      <Hero onExploreClick={scrollToExplore} />
+
+      {/* Featured Names */}
+      <FeaturedNames names={data.names} onSelectName={handleSelectName} />
 
       {/* Footer */}
       <Footer />

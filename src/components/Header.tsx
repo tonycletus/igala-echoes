@@ -19,7 +19,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-            Ìgálá Orúkọ
+            Ìgálá Echoes
           </span>
         </Link>
 

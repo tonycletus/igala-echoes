@@ -55,6 +55,16 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      {/* Back Link - Top Left */}
+      <div className="container mx-auto max-w-3xl px-4 py-6">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
+        >
+          ← Back to Names Explorer
+        </Link>
+      </div>
+      
       {/* Hero */}
       <section 
         className="relative py-16 px-4"
@@ -156,13 +166,6 @@ const Contact = () => {
           )}
         </div>
       </section>
-
-      {/* Back Link */}
-      <div className="text-center pb-12">
-        <Link to="/" className="text-igala-coral hover:text-igala-coral/80 font-medium transition-colors">
-          ← Back to Names Explorer
-        </Link>
-      </div>
     </main>
   );
 };
