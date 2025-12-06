@@ -6,8 +6,10 @@ import NameDetailModal from "@/components/NameDetailModal";
 import SearchFilters from "@/components/SearchFilters";
 import FeaturedNames from "@/components/FeaturedNames";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { IgalaName, NamesData } from "@/types/names";
 import namesData from "@/data/names.json";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const data = namesData as NamesData;
@@ -19,6 +21,7 @@ const Index = () => {
   const [selectedGender, setSelectedGender] = useState<string | null>(null);
   const [selectedName, setSelectedName] = useState<IgalaName | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAllNames, setShowAllNames] = useState(false);
 
   // Filter names based on search and filters
   const filteredNames = useMemo(() => {
@@ -35,6 +38,8 @@ const Index = () => {
       return matchesSearch && matchesCategory && matchesGender;
     });
   }, [data.names, searchQuery, selectedCategory, selectedGender]);
+
+  const displayedNames = showAllNames ? filteredNames : filteredNames.slice(0, 3);
 
   const handleSelectName = (name: IgalaName) => {
     setSelectedName(name);
@@ -84,7 +89,7 @@ const Index = () => {
             <p className="text-sm text-muted-foreground text-center">
               Showing{" "}
               <span className="font-semibold text-foreground">
-                {Math.min(filteredNames.length, 6)}
+                {displayedNames.length}
               </span>
               {" of "}
               <span className="font-semibold text-foreground">{filteredNames.length}</span>
@@ -95,17 +100,44 @@ const Index = () => {
 
           {/* Names Grid */}
           {filteredNames.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredNames.slice(0, 6).map((name, index) => (
-                <div
-                  key={name.id}
-                  className="animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
-                >
-                  <NameCard name={name} onSelect={handleSelectName} />
+            <>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {displayedNames.map((name, index) => (
+                  <div
+                    key={name.id}
+                    className="animate-fade-up"
+                    style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
+                  >
+                    <NameCard name={name} onSelect={handleSelectName} />
+                  </div>
+                ))}
+              </div>
+              {!showAllNames && filteredNames.length > 3 && (
+                <div className="text-center mt-10">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full"
+                    onClick={() => setShowAllNames(true)}
+                  >
+                    Explore All Names
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </div>
-              ))}
-            </div>
+              )}
+              {showAllNames && filteredNames.length > 3 && (
+                <div className="text-center mt-10">
+                  <Button
+                    variant="ghost"
+                    size="lg"
+                    className="rounded-full"
+                    onClick={() => setShowAllNames(false)}
+                  >
+                    Show Less
+                  </Button>
+                </div>
+              )}
+            </>
           ) : (
             <div className="text-center py-20">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-muted flex items-center justify-center">
@@ -126,7 +158,14 @@ const Index = () => {
       <Hero onExploreClick={scrollToExplore} />
 
       {/* Featured Names */}
-      <FeaturedNames names={data.names} onSelectName={handleSelectName} />
+      <FeaturedNames 
+        names={data.names} 
+        onSelectName={handleSelectName} 
+        onExploreAll={() => {
+          setShowAllNames(true);
+          exploreRef.current?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
 
       {/* Footer */}
       <Footer />

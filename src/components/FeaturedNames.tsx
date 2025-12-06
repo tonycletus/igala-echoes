@@ -2,15 +2,21 @@ import { IgalaName } from "@/types/names";
 import { Card } from "@/components/ui/card";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useMemo } from "react";
 
 interface FeaturedNamesProps {
   names: IgalaName[];
   onSelectName: (name: IgalaName) => void;
+  onExploreAll: () => void;
 }
 
-const FeaturedNames = ({ names, onSelectName }: FeaturedNamesProps) => {
-  // Pick 3 featured names
-  const featuredNames = names.slice(0, 3);
+const FeaturedNames = ({ names, onSelectName, onExploreAll }: FeaturedNamesProps) => {
+  // Get the 3 most recent names (simulating "recently added/updated within last 7 days")
+  // Since we don't have timestamps in the data, we'll use the last 3 names as "recent"
+  const featuredNames = useMemo(() => {
+    // Take the last 3 names from the array (most recently added)
+    return names.slice(-3).reverse();
+  }, [names]);
 
   return (
     <section className="py-20 bg-gradient-to-b from-background via-igala-cream/30 to-background">
@@ -85,7 +91,12 @@ const FeaturedNames = ({ names, onSelectName }: FeaturedNamesProps) => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Button variant="outline" size="lg" className="rounded-full">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="rounded-full"
+            onClick={onExploreAll}
+          >
             Explore All Names
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
