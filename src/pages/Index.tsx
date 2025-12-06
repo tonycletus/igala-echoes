@@ -49,10 +49,10 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Header />
       {/* Explore Section */}
-      <section ref={exploreRef} className="py-20 bg-background pattern-igala">
+      <section ref={exploreRef} className="pt-28 pb-20 bg-background pattern-igala">
         <div className="container px-4">
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
               Explore{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-olive to-igala-gold">
@@ -60,7 +60,7 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Search through our collection of sacred Igala names. Each name holds a universe of meaning.
+              Search through our collection of sacred Ìgálá names. Each name holds a universe of meaning.
             </p>
           </div>
 
@@ -74,6 +74,8 @@ const Index = () => {
               selectedGender={selectedGender}
               onGenderChange={setSelectedGender}
               categories={data.categories}
+              allNames={data.names}
+              onSelectName={handleSelectName}
             />
           </div>
 

@@ -2,7 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { IgalaName } from "@/types/names";
 import { Volume2, Share2, Heart, Bookmark } from "lucide-react";
-import { useState } from "react";
+import { useNameActions } from "@/hooks/useNameActions";
+import { useAuth } from "@/contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 interface NameCardProps {
   name: IgalaName;
@@ -30,14 +33,57 @@ const genderIcons: Record<string, string> = {
 };
 
 const NameCard = ({ name, onSelect }: NameCardProps) => {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { isLiked, isFavorited, toggleLike, toggleFavorite } = useNameActions(name.id);
 
   const speakName = () => {
     const utterance = new SpeechSynthesisUtterance(name.name);
     utterance.lang = "en-NG";
     utterance.rate = 0.7;
     speechSynthesis.speak(utterance);
+  };
+
+  const handleLike = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
+    await toggleLike();
+  };
+
+  const handleFavorite = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
+    await toggleFavorite();
+  };
+
+  const handleShare = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const shareData = {
+      title: name.name,
+      text: `${name.name} means "${name.meaning}". An Ìgálá name.`,
+      url: window.location.origin,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        // User cancelled or error
+      }
+    } else {
+      // Fallback: copy to clipboard
+      await navigator.clipboard.writeText(
+        `${name.name} - "${name.meaning}". ${name.origin_story}`
+      );
+      toast({ title: "Copied to clipboard!" });
+    }
   };
 
   return (
@@ -98,36 +144,24 @@ const NameCard = ({ name, onSelect }: NameCardProps) => {
               variant="ghost" 
               size="sm"
               className={isLiked ? "text-igala-coral" : "text-muted-foreground hover:text-igala-coral"}
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsLiked(!isLiked);
-              }}
+              onClick={handleLike}
             >
               <Heart className={`w-4 h-4 ${isLiked ? "fill-current" : ""}`} />
             </Button>
             <Button 
               variant="ghost" 
               size="sm"
-              className={isSaved ? "text-igala-gold" : "text-muted-foreground hover:text-igala-gold"}
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsSaved(!isSaved);
-              }}
+              className={isFavorited ? "text-igala-gold" : "text-muted-foreground hover:text-igala-gold"}
+              onClick={handleFavorite}
             >
-              <Bookmark className={`w-4 h-4 ${isSaved ? "fill-current" : ""}`} />
+              <Bookmark className={`w-4 h-4 ${isFavorited ? "fill-current" : ""}`} />
             </Button>
           </div>
           <Button 
             variant="ghost" 
             size="sm"
             className="text-muted-foreground hover:text-igala-olive"
-            onClick={(e) => {
-              e.stopPropagation();
-              navigator.share?.({
-                title: name.name,
-                text: `${name.name} - ${name.meaning}. An Igala name.`,
-              });
-            }}
+            onClick={handleShare}
           >
             <Share2 className="w-4 h-4" />
             Share

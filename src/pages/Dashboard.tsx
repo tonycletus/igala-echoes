@@ -7,32 +7,46 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
-import { Heart, Bookmark, FileText, User, Settings } from "lucide-react";
+import { Heart, Bookmark, FileText, Trash2, Edit, Loader2, X } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import namesData from "@/data/names.json";
-import { IgalaName } from "@/types/names";
 
 interface Submission {
   id: string;
   name: string;
   meaning: string;
+  pronunciation: string | null;
+  gender: string | null;
+  category: string | null;
+  origin_story: string | null;
+  related_proverb: string | null;
   status: string;
   created_at: string;
 }
 
 const statusColors: Record<string, string> = {
-  pending: "bg-yellow-500/10 text-yellow-500",
-  accepted: "bg-green-500/10 text-green-500",
-  rejected: "bg-red-500/10 text-red-500",
+  pending: "bg-yellow-500/10 text-yellow-600 border-yellow-500/30",
+  accepted: "bg-green-500/10 text-green-600 border-green-500/30",
+  rejected: "bg-red-500/10 text-red-600 border-red-500/30",
 };
 
 const Dashboard = () => {
   const { user, profile, isLoading } = useAuth();
   const navigate = useNavigate();
+  const { toast } = useToast();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [likes, setLikes] = useState<string[]>([]);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [isDataLoading, setIsDataLoading] = useState(true);
+  const [editingSubmission, setEditingSubmission] = useState<Submission | null>(null);
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -52,15 +66,113 @@ const Dashboard = () => {
       supabase.from("user_likes").select("name_id").eq("user_id", user!.id),
       supabase
         .from("name_submissions")
-        .select("id, name, meaning, status, created_at")
+        .select("*")
         .eq("user_id", user!.id)
         .order("created_at", { ascending: false }),
     ]);
 
     setFavorites(favRes.data?.map((f) => f.name_id) || []);
     setLikes(likeRes.data?.map((l) => l.name_id) || []);
-    setSubmissions(subRes.data || []);
+    setSubmissions((subRes.data as Submission[]) || []);
     setIsDataLoading(false);
+  };
+
+  const handleRemoveFavorite = async (nameId: string) => {
+    const { error } = await supabase
+      .from("user_favorites")
+      .delete()
+      .eq("user_id", user!.id)
+      .eq("name_id", nameId);
+
+    if (!error) {
+      setFavorites((prev) => prev.filter((id) => id !== nameId));
+      toast({ title: "Removed from favorites" });
+    }
+  };
+
+  const handleRemoveLike = async (nameId: string) => {
+    const { error } = await supabase
+      .from("user_likes")
+      .delete()
+      .eq("user_id", user!.id)
+      .eq("name_id", nameId);
+
+    if (!error) {
+      setLikes((prev) => prev.filter((id) => id !== nameId));
+      toast({ title: "Removed from likes" });
+    }
+  };
+
+  const handleEditSubmission = (submission: Submission) => {
+    if (submission.status !== "pending") {
+      toast({
+        title: "Cannot edit",
+        description: "Only pending submissions can be edited.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setEditingSubmission(submission);
+    setIsEditDialogOpen(true);
+  };
+
+  const handleSaveEdit = async () => {
+    if (!editingSubmission) return;
+
+    setIsSaving(true);
+    const { error } = await supabase
+      .from("name_submissions")
+      .update({
+        name: editingSubmission.name,
+        meaning: editingSubmission.meaning,
+        pronunciation: editingSubmission.pronunciation,
+        origin_story: editingSubmission.origin_story,
+        related_proverb: editingSubmission.related_proverb,
+      })
+      .eq("id", editingSubmission.id);
+
+    setIsSaving(false);
+
+    if (error) {
+      toast({
+        title: "Update failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } else {
+      setSubmissions((prev) =>
+        prev.map((s) => (s.id === editingSubmission.id ? editingSubmission : s))
+      );
+      setIsEditDialogOpen(false);
+      setEditingSubmission(null);
+      toast({ title: "Submission updated!" });
+    }
+  };
+
+  const handleDeleteSubmission = async (id: string, status: string) => {
+    if (status !== "pending") {
+      toast({
+        title: "Cannot delete",
+        description: "Only pending submissions can be deleted.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setDeletingId(id);
+    const { error } = await supabase.from("name_submissions").delete().eq("id", id);
+    setDeletingId(null);
+
+    if (error) {
+      toast({
+        title: "Delete failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } else {
+      setSubmissions((prev) => prev.filter((s) => s.id !== id));
+      toast({ title: "Submission deleted" });
+    }
   };
 
   const favoriteNames = namesData.names.filter((n) => favorites.includes(n.id));
@@ -87,7 +199,7 @@ const Dashboard = () => {
               Welcome, {profile?.first_name || "User"}!
             </h1>
             <p className="text-muted-foreground mt-1">
-              Manage your Igala names collection
+              Manage your Ìgálá names collection
             </p>
           </div>
 
@@ -176,8 +288,16 @@ const Dashboard = () => {
                       {favoriteNames.map((name) => (
                         <div
                           key={name.id}
-                          className="p-4 rounded-lg border border-border bg-card"
+                          className="p-4 rounded-lg border border-border bg-card group relative"
                         >
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive"
+                            onClick={() => handleRemoveFavorite(name.id)}
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
                           <h3 className="font-display text-lg font-semibold">
                             {name.name}
                           </h3>
@@ -217,8 +337,16 @@ const Dashboard = () => {
                       {likedNames.map((name) => (
                         <div
                           key={name.id}
-                          className="p-4 rounded-lg border border-border bg-card"
+                          className="p-4 rounded-lg border border-border bg-card group relative"
                         >
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive"
+                            onClick={() => handleRemoveLike(name.id)}
+                          >
+                            <X className="w-4 h-4" />
+                          </Button>
                           <h3 className="font-display text-lg font-semibold">
                             {name.name}
                           </h3>
@@ -265,19 +393,40 @@ const Dashboard = () => {
                           key={sub.id}
                           className="flex items-center justify-between p-4 rounded-lg border border-border"
                         >
-                          <div>
+                          <div className="flex-1">
                             <h3 className="font-semibold">{sub.name}</h3>
                             <p className="text-sm text-muted-foreground">
                               {sub.meaning}
                             </p>
                           </div>
-                          <div className="text-right">
-                            <Badge className={statusColors[sub.status]}>
+                          <div className="flex items-center gap-3">
+                            <Badge className={`border ${statusColors[sub.status]}`}>
                               {sub.status}
                             </Badge>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {new Date(sub.created_at).toLocaleDateString()}
-                            </p>
+                            {sub.status === "pending" && (
+                              <div className="flex items-center gap-1">
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => handleEditSubmission(sub)}
+                                >
+                                  <Edit className="w-4 h-4" />
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  className="text-destructive hover:text-destructive"
+                                  onClick={() => handleDeleteSubmission(sub.id, sub.status)}
+                                  disabled={deletingId === sub.id}
+                                >
+                                  {deletingId === sub.id ? (
+                                    <Loader2 className="w-4 h-4 animate-spin" />
+                                  ) : (
+                                    <Trash2 className="w-4 h-4" />
+                                  )}
+                                </Button>
+                              </div>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -290,6 +439,74 @@ const Dashboard = () => {
         </div>
       </main>
       <Footer />
+
+      {/* Edit Submission Dialog */}
+      <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Edit Submission</DialogTitle>
+          </DialogHeader>
+          {editingSubmission && (
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label>Name</Label>
+                <Input
+                  value={editingSubmission.name}
+                  onChange={(e) =>
+                    setEditingSubmission({ ...editingSubmission, name: e.target.value })
+                  }
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>Meaning</Label>
+                <Input
+                  value={editingSubmission.meaning}
+                  onChange={(e) =>
+                    setEditingSubmission({ ...editingSubmission, meaning: e.target.value })
+                  }
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>Pronunciation</Label>
+                <Input
+                  value={editingSubmission.pronunciation || ""}
+                  onChange={(e) =>
+                    setEditingSubmission({ ...editingSubmission, pronunciation: e.target.value })
+                  }
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>Origin Story</Label>
+                <Textarea
+                  value={editingSubmission.origin_story || ""}
+                  onChange={(e) =>
+                    setEditingSubmission({ ...editingSubmission, origin_story: e.target.value })
+                  }
+                  rows={3}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>Related Proverb</Label>
+                <Input
+                  value={editingSubmission.related_proverb || ""}
+                  onChange={(e) =>
+                    setEditingSubmission({ ...editingSubmission, related_proverb: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+          )}
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setIsEditDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button onClick={handleSaveEdit} disabled={isSaving}>
+              {isSaving ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : null}
+              Save Changes
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
