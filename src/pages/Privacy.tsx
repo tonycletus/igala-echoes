@@ -37,7 +37,7 @@ const Privacy = () => {
       {/* Privacy Content */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-3xl">
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-elegant border border-border/50 space-y-10">
+          <div className="bg-card rounded-2xl p-2 md:p-12 shadow-elegant border border-border/50 space-y-10">
             
             <div className="flex gap-4">
               <div className="flex-shrink-0">
@@ -63,7 +63,7 @@ const Privacy = () => {
               <div>
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">No Cookies</h2>
                 <p className="text-muted-foreground">
-                  This application does not use cookies—not for tracking, not for advertising, not for anything. 
+                  This application does not use cookies, not for tracking, not for advertising, not for anything. 
                   Your browser remains free from our digital fingerprints.
                 </p>
               </div>
@@ -95,7 +95,7 @@ const Privacy = () => {
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">Cultural Philosophy</h2>
                 <p className="text-muted-foreground">
                   Igala Echoes is built on a "no surveillance" philosophy. We believe that cultural preservation 
-                  should honor the trust our ancestors placed in knowledge sharing—open, honest, and free from 
+                  should honor the trust our ancestors placed in knowledge sharing open, honest, and free from 
                   exploitation. This app exists to serve the Igala community, not to monetize it.
                 </p>
               </div>

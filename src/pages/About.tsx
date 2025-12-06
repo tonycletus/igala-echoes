@@ -44,13 +44,13 @@ const About = () => {
                 Why Names Matter
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                In Igala culture, a name is not merely an identifier—it is a prophecy, a prayer, a piece of ancestral wisdom 
+                In Igala culture, a name is not merely an identifier, it is a prophecy, a prayer, a piece of ancestral wisdom 
                 passed down through generations. When an Igala elder names a child, they speak destiny into existence.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 <strong className="text-foreground">Igala Echoes</strong> exists to ensure these sacred traditions survive 
                 the test of time. As our world rapidly digitizes, we believe oral heritage must find its place in the 
-                digital archive—accessible to every Igala person, wherever they may be.
+                digital archive accessible to every Igala person, wherever they may be.
               </p>
             </div>
 
@@ -85,9 +85,8 @@ const About = () => {
                 your heritage, or simply curious about this rich culture, you are part of something larger.
               </p>
               <blockquote className="border-l-4 border-igala-gold pl-6 italic text-foreground text-xl">
-                "Ọ̀rúkọ rere sàn ju wúrà àti fàdákà lọ"
+                "A good name is worth more than gold and silver"
                 <footer className="text-muted-foreground text-base mt-2 not-italic">
-                  — A good name is worth more than gold and silver
                 </footer>
               </blockquote>
             </div>
