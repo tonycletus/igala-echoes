@@ -1,22 +1,20 @@
-# Welcome to your Lovable project
+# Igala Echoes
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/e62aa5a7-8571-4cd0-b886-75907171d485
+**URL**: https://igalaechoes.vercel.app
+
+## About Igala Echoes
+
+Igala Echoes is a cultural heritage project dedicated to preserving and sharing the profound meanings, rich histories, and sacred origins of Igala names. This application helps connect generations by documenting names that carry stories, preserve heritage, and connect generations.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/e62aa5a7-8571-4cd0-b886-75907171d485) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +60,4 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/e62aa5a7-8571-4cd0-b886-75907171d485) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is deployed on Vercel at https://igalaechoes.vercel.app

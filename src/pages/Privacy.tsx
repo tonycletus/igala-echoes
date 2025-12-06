@@ -48,7 +48,7 @@ const Privacy = () => {
               <div>
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">No Tracking</h2>
                 <p className="text-muted-foreground">
-                  We do not track your browsing behavior, clicks, or interactions. Your exploration of Ìgálá names 
+                  We do not track your browsing behavior, clicks, or interactions. Your exploration of Igala names 
                   is entirely private. No analytics scripts, no user profiling, no behavioral data collection.
                 </p>
               </div>
@@ -94,16 +94,16 @@ const Privacy = () => {
               <div>
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">Cultural Philosophy</h2>
                 <p className="text-muted-foreground">
-                  Ìgálá Echoes is built on a "no surveillance" philosophy. We believe that cultural preservation 
+                  Igala Echoes is built on a "no surveillance" philosophy. We believe that cultural preservation 
                   should honor the trust our ancestors placed in knowledge sharing—open, honest, and free from 
-                  exploitation. This app exists to serve the Ìgálá community, not to monetize it.
+                  exploitation. This app exists to serve the Igala community, not to monetize it.
                 </p>
               </div>
             </div>
 
             <div className="border-t border-border pt-8">
               <p className="text-muted-foreground text-sm text-center">
-                This privacy policy is effective as of 2024 and applies to all users of Ìgálá Echoes. 
+                This privacy policy is effective as of 2024 and applies to all users of Igala Echoes. 
                 We reserve the right to update this policy, but our core commitment to privacy will never change.
               </p>
             </div>

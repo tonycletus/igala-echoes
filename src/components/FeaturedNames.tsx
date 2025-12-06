@@ -24,8 +24,7 @@ const FeaturedNames = ({ names, onSelectName, onExploreAll }: FeaturedNamesProps
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-igala-gold/10 border border-igala-gold/30">
-            <Sparkles className="w-4 h-4 text-igala-gold" />
-            <span className="text-sm font-medium text-igala-amber">Featured This Week</span>
+            <span className="text-sm font-medium text-igala-amber">Newly Added - This Week</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Names That{" "}

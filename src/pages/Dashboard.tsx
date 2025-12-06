@@ -199,7 +199,7 @@ const Dashboard = () => {
               Welcome, {profile?.first_name || "User"}!
             </h1>
             <p className="text-muted-foreground mt-1">
-              Manage your Ìgálá names collection
+              Manage your Igala names collection
             </p>
           </div>
 

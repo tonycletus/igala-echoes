@@ -29,7 +29,7 @@ const AdminSidebar = () => {
           Admin Panel
         </h1>
         <p className="text-xs text-muted-foreground mt-1">
-          Manage Ìgálá Echoes
+          Manage Igala Echoes
         </p>
       </div>
 

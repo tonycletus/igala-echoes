@@ -33,7 +33,7 @@ const Hero = ({ onExploreClick }: HeroProps) => {
 
         {/* Main Title */}
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-igala-cream mb-6 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          Ìgálá{" "}
+          Igala{" "}
           <span className="relative inline-block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-igala-gold via-igala-amber to-igala-coral">
               Echoes
@@ -62,14 +62,6 @@ const Hero = ({ onExploreClick }: HeroProps) => {
           >
             <Search className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Explore Names
-          </Button>
-          <Button 
-            variant="outline" 
-            size="xl"
-            className="border-igala-cream/30 text-igala-cream hover:bg-igala-cream/10 hover:border-igala-gold"
-          >
-            <Sparkles className="w-5 h-5" />
-            Generate a Name
           </Button>
         </div>
 

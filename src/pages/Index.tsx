@@ -65,7 +65,7 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Search through our collection of sacred Ìgálá names. Each name holds a universe of meaning.
+              Search through our collection of sacred Igala names. Each name holds a universe of meaning.
             </p>
           </div>
 

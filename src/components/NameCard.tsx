@@ -67,7 +67,7 @@ const NameCard = ({ name, onSelect }: NameCardProps) => {
     e.stopPropagation();
     const shareData = {
       title: name.name,
-      text: `${name.name} means "${name.meaning}". An Ìgálá name.`,
+      text: `${name.name} means "${name.meaning}". An Igala name.`,
       url: window.location.origin,
     };
 

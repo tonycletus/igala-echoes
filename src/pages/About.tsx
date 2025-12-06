@@ -26,7 +26,7 @@ const About = () => {
             <span className="text-white/90 text-sm font-medium">Our Mission</span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Preserving the Soul of Ìgálá
+            Preserving the Soul of Igala
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Every name carries a story. Every story carries a people.
@@ -44,13 +44,13 @@ const About = () => {
                 Why Names Matter
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                In Ìgálá culture, a name is not merely an identifier—it is a prophecy, a prayer, a piece of ancestral wisdom 
-                passed down through generations. When an Ìgálá elder names a child, they speak destiny into existence.
+                In Igala culture, a name is not merely an identifier—it is a prophecy, a prayer, a piece of ancestral wisdom 
+                passed down through generations. When an Igala elder names a child, they speak destiny into existence.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                <strong className="text-foreground">Ìgálá Echoes</strong> exists to ensure these sacred traditions survive 
+                <strong className="text-foreground">Igala Echoes</strong> exists to ensure these sacred traditions survive 
                 the test of time. As our world rapidly digitizes, we believe oral heritage must find its place in the 
-                digital archive—accessible to every Ìgálá person, wherever they may be.
+                digital archive—accessible to every Igala person, wherever they may be.
               </p>
             </div>
 
@@ -59,7 +59,7 @@ const About = () => {
                 <BookOpen className="w-10 h-10 text-igala-olive mb-4" />
                 <h3 className="font-display text-xl font-bold text-foreground mb-3">Oral Heritage</h3>
                 <p className="text-muted-foreground">
-                  For centuries, Ìgálá wisdom was passed from mouth to ear, elder to child, generation to generation. 
+                  For centuries, Igala wisdom was passed from mouth to ear, elder to child, generation to generation. 
                   We honor this tradition while ensuring it endures in new forms.
                 </p>
               </div>
@@ -69,7 +69,7 @@ const About = () => {
                 <h3 className="font-display text-xl font-bold text-foreground mb-3">Digital Preservation</h3>
                 <p className="text-muted-foreground">
                   By documenting names, meanings, pronunciations, and stories, we create a living archive that 
-                  connects the Ìgálá diaspora to their roots.
+                  connects the Igala diaspora to their roots.
                 </p>
               </div>
             </div>
@@ -80,8 +80,8 @@ const About = () => {
                 Join the Movement
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                This is more than an app—it is a movement. Every name you explore, share, or contribute helps 
-                preserve Ìgálá identity for future generations. Whether you're naming a child, reconnecting with 
+                This is more than an app, it is a movement. Every name you explore, share, or contribute helps 
+                preserve Igala identity for future generations. Whether you're naming a child, reconnecting with 
                 your heritage, or simply curious about this rich culture, you are part of something larger.
               </p>
               <blockquote className="border-l-4 border-igala-gold pl-6 italic text-foreground text-xl">

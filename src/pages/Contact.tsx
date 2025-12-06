@@ -80,7 +80,7 @@ const Contact = () => {
             Let's Collaborate
           </h1>
           <p className="text-white/90 max-w-xl mx-auto">
-            Whether you're a researcher, cultural advocate, or simply passionate about Ìgálá heritage, we'd love to hear from you.
+            Whether you're a researcher, cultural advocate, or simply passionate about Igala heritage, we'd love to hear from you.
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ const Contact = () => {
                 <h3 className="font-semibold text-foreground mb-2">Cultural Collaboration</h3>
                 <p className="text-muted-foreground text-sm">
                   We welcome partnerships with universities, cultural organizations, linguists, and anyone 
-                  committed to preserving Ìgálá heritage. Reach out for research collaborations, content 
+                  committed to preserving Igala heritage. Reach out for research collaborations, content 
                   contributions, or community initiatives.
                 </p>
               </div>

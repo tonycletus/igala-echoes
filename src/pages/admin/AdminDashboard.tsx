@@ -76,7 +76,7 @@ const AdminDashboard = () => {
       <div className="mb-8">
         <h1 className="font-display text-3xl font-bold text-foreground">Dashboard</h1>
         <p className="text-muted-foreground mt-1">
-          Overview of Ìgálá Echoes platform
+          Overview of Igala Echoes platform
         </p>
       </div>
 

@@ -18,9 +18,11 @@ const Header = () => {
       <div className="container px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-            Ìgálá Echoes
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="Igala Echoes Logo" 
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Navigation */}

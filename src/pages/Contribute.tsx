@@ -78,7 +78,7 @@ const Contribute = () => {
 
       toast({
         title: "Name submitted successfully!",
-        description: "Your contribution is pending review. Thank you for preserving Ìgálá heritage!"
+        description: "Your contribution is pending review. Thank you for preserving Igala heritage!"
       });
 
       // Reset form
@@ -127,10 +127,10 @@ const Contribute = () => {
             <span className="text-white/90 text-sm font-medium">Community Contribution</span>
           </div>
           <h1 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-            Share an Ìgálá Name
+            Share an Igala Name
           </h1>
           <p className="text-white/90 max-w-xl mx-auto">
-            Your knowledge helps preserve our heritage. Every name you contribute keeps Ìgálá culture alive for future generations.
+            Your knowledge helps preserve our heritage. Every name you contribute keeps Igala culture alive for future generations.
           </p>
         </div>
       </section>
