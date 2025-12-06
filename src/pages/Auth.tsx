@@ -28,7 +28,7 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
-  
+
   const { user, signIn, signUp } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -64,9 +64,9 @@ const Auth = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsLoading(true);
 
     try {
@@ -134,10 +134,11 @@ const Auth = () => {
           {/* Logo */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-igala-gold" />
-              <span className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-igala-gold to-igala-coral">
-                Igala Echoes
-              </span>
+              <img
+                src="/favicon.png"
+                alt="Igala Echoes Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <h1 className="text-xl font-semibold text-foreground">
               {isSignUp ? "Create your account" : "Welcome back"}
@@ -221,8 +222,8 @@ const Auth = () => {
               {isLoading
                 ? "Please wait..."
                 : isSignUp
-                ? "Create Account"
-                : "Sign In"}
+                  ? "Create Account"
+                  : "Sign In"}
             </Button>
           </form>
 

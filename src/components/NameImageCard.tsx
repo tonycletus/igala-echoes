@@ -47,7 +47,7 @@ const NameImageCard = forwardRef<HTMLDivElement, NameImageCardProps>(
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="w-8 h-1 bg-white/40 rounded-full" />
             <span className="text-white/90 text-sm font-semibold tracking-wide">
-              Igala Names
+              Igala Echoes
             </span>
             <div className="w-8 h-1 bg-white/40 rounded-full" />
           </div>
