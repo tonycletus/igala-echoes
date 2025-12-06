@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, BookOpen, Users, Globe } from "lucide-react";
+import { Heart, BookOpen, Users, Globe, Sparkle } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const About = () => {
@@ -23,6 +23,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto max-w-4xl relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
+           <Sparkle className="w-4 h-4 text-white" />
             <span className="text-white/90 text-sm font-medium">Our Mission</span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
