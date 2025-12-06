@@ -111,7 +111,7 @@ const SearchFilters = ({
           }}
           onFocus={() => setShowSuggestions(true)}
           onKeyDown={handleKeyDown}
-          className="pl-12 pr-12 h-14 text-lg rounded-xl border-2 border-border/50 focus:border-primary bg-card/50 backdrop-blur-sm"
+          className="pl-12 h-14 text-lg rounded-xl border-2 border-border/50 focus:border-primary bg-card/50 backdrop-blur-sm"
         />
         {searchQuery && (
           <Button

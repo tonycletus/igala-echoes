@@ -59,12 +59,6 @@ const Header = () => {
                     My Dashboard
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/dashboard/favorites" className="flex items-center gap-2 cursor-pointer">
-                    <Heart className="w-4 h-4" />
-                    My Favorites
-                  </Link>
-                </DropdownMenuItem>
                 {isAdmin && (
                   <>
                     <DropdownMenuSeparator />

@@ -117,11 +117,11 @@ const Contribute = () => {
       
       {/* Hero */}
       <section 
-        className="relative py-16 px-4 pt-28"
+        className="relative py-16 px-0 sm:px-4 pt-28"
         style={{ background: 'linear-gradient(135deg, hsl(78, 52%, 32%) 0%, hsl(38, 91%, 55%) 100%)' }}
       >
         <div className="absolute inset-0 bg-black/10" />
-        <div className="container mx-auto max-w-3xl relative z-10 text-center">
+        <div className="container mx-auto max-w-3xl relative z-10 text-center px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
             <Heart className="w-4 h-4 text-white" />
             <span className="text-white/90 text-sm font-medium">Community Contribution</span>
@@ -136,10 +136,10 @@ const Contribute = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-2xl">
-          <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-elegant border border-border/50 space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+      <section className="py-10 px-0 sm:px-4">
+        <div className="container mx-auto max-w-4xl">
+          <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 shadow-elegant border border-border/50 space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name *</Label>
                 <Input
@@ -172,7 +172,7 @@ const Contribute = () => {
               />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label>Gender</Label>
                 <Select value={formData.gender} onValueChange={(v) => setFormData({ ...formData, gender: v })}>
@@ -226,14 +226,13 @@ const Contribute = () => {
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-5 h-5 mr-2" />
                   Submit Name for Review
                 </>
               )}
             </Button>
           </form>
 
-          <p className="text-center text-muted-foreground text-sm mt-6">
+          <p className="text-center text-muted-foreground text-sm mt-4">
             Your submission will be reviewed by our team before being added to the database.
           </p>
         </div>

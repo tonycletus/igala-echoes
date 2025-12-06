@@ -27,7 +27,6 @@ const Hero = ({ onExploreClick }: HeroProps) => {
       <div className="container relative z-10 px-4 text-center">
         {/* Cultural Badge */}
         <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-igala-gold/10 border border-igala-gold/30 animate-fade-up">
-          <Sparkles className="w-4 h-4 text-igala-gold" />
           <span className="text-sm font-medium text-igala-cream/90">Preserving Igala Heritage</span>
         </div>
 

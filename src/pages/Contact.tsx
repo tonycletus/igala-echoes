@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -56,10 +57,10 @@ const Contact = () => {
   return (
     <main className="min-h-screen bg-background">
       {/* Back Link - Top Left */}
-      <div className="container mx-auto max-w-3xl px-4 py-6">
+      <div className="container mx-auto max-w-3xl px-0 sm:px-4 py-6">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
+          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors px-4"
         >
           ← Back to Names Explorer
         </Link>
@@ -67,11 +68,11 @@ const Contact = () => {
       
       {/* Hero */}
       <section 
-        className="relative py-16 px-4"
+        className="relative py-16 px-0 sm:px-4"
         style={{ background: 'linear-gradient(135deg, hsl(15, 79%, 55%) 0%, hsl(38, 91%, 55%) 100%)' }}
       >
         <div className="absolute inset-0 bg-black/10" />
-        <div className="container mx-auto max-w-3xl relative z-10 text-center">
+        <div className="container mx-auto max-w-3xl relative z-10 text-center px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
             <Mail className="w-4 h-4 text-white" />
             <span className="text-white/90 text-sm font-medium">Get in Touch</span>
@@ -86,15 +87,15 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-2xl">
+      <section className="py-10 px-0 sm:px-4">
+        <div className="container mx-auto max-w-4xl">
           {/* Collaboration Note */}
-          <div className="bg-igala-gold/10 rounded-xl p-6 mb-8 border border-igala-gold/20">
-            <div className="flex gap-4">
-              <Users className="w-6 h-6 text-igala-gold flex-shrink-0 mt-1" />
+          <div className="bg-igala-gold/10 rounded-xl p-4 mb-6 border border-igala-gold/20">
+            <div className="flex gap-3">
+              <Users className="w-5 h-5 text-igala-gold flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Cultural Collaboration</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-semibold text-foreground mb-1">Cultural Collaboration</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm">
                   We welcome partnerships with universities, cultural organizations, linguists, and anyone 
                   committed to preserving Igala heritage. Reach out for research collaborations, content 
                   contributions, or community initiatives.
@@ -104,7 +105,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-elegant border border-border/50 space-y-6">
+          <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 shadow-elegant border border-border/50 space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Your Name *</Label>
               <Input
@@ -141,31 +142,31 @@ const Contact = () => {
             </div>
 
             <Button type="submit" variant="cultural" size="lg" className="w-full">
-              <Sparkles className="w-5 h-5 mr-2" />
               Prepare Message
             </Button>
           </form>
 
           {/* Generated JSON Output */}
           {generatedJSON && (
-            <div className="mt-8 bg-card rounded-2xl p-6 shadow-elegant border border-border/50">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-display text-lg font-semibold text-foreground">Your Message</h3>
+            <div className="mt-6 bg-card rounded-2xl p-4 shadow-elegant border border-border/50">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="font-display text-base md:text-lg font-semibold text-foreground">Your Message</h3>
                 <Button variant="outline" size="sm" onClick={handleCopy}>
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   {copied ? "Copied" : "Copy"}
                 </Button>
               </div>
-              <pre className="bg-muted rounded-lg p-4 overflow-x-auto text-sm text-foreground">
+              <pre className="bg-muted rounded-lg p-3 overflow-x-auto text-xs sm:text-sm text-foreground">
                 {generatedJSON}
               </pre>
-              <p className="text-muted-foreground text-sm mt-4">
+              <p className="text-muted-foreground text-xs sm:text-sm mt-3">
                 Copy this message and send it to the project maintainers via your preferred communication channel.
               </p>
             </div>
           )}
         </div>
       </section>
+      <Footer />
     </main>
   );
 };
