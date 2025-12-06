@@ -1,16 +1,22 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Heart, Copy, Download, Check, Sparkles } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Heart, Sparkles, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/integrations/supabase/client";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Contribute = () => {
   const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
+  const { user, isLoading: authLoading } = useAuth();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     meaning: "",
@@ -20,7 +26,12 @@ const Contribute = () => {
     originStory: "",
     relatedProverb: ""
   });
-  const [generatedJSON, setGeneratedJSON] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate("/auth");
+    }
+  }, [user, authLoading, navigate]);
 
   const categories = [
     { value: "spiritual", label: "Spiritual" },
@@ -32,10 +43,10 @@ const Contribute = () => {
     { value: "descriptive", label: "Descriptive" }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.meaning) {
+    if (!formData.name.trim() || !formData.meaning.trim()) {
       toast({
         title: "Required fields missing",
         description: "Please provide at least a name and meaning.",
@@ -44,61 +55,69 @@ const Contribute = () => {
       return;
     }
 
-    const jsonOutput = {
-      id: formData.name.toLowerCase().replace(/\s+/g, '-'),
-      name: formData.name,
-      meaning: formData.meaning,
-      pronunciation: formData.pronunciation || `/${formData.name.toLowerCase()}/`,
-      gender: formData.gender,
-      category: formData.category,
-      originStory: formData.originStory || `The name ${formData.name} carries deep significance in Ìgálá culture.`,
-      relatedProverb: formData.relatedProverb || "",
-      featured: false
-    };
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
 
-    setGeneratedJSON(JSON.stringify(jsonOutput, null, 2));
-    toast({
-      title: "JSON Generated!",
-      description: "Copy or download your contribution below."
-    });
-  };
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.from("name_submissions").insert({
+        user_id: user.id,
+        name: formData.name.trim(),
+        meaning: formData.meaning.trim(),
+        pronunciation: formData.pronunciation.trim() || `/${formData.name.toLowerCase()}/`,
+        gender: formData.gender,
+        category: formData.category,
+        origin_story: formData.originStory.trim() || null,
+        related_proverb: formData.relatedProverb.trim() || null,
+        status: "pending"
+      });
 
-  const handleCopy = async () => {
-    if (generatedJSON) {
-      await navigator.clipboard.writeText(generatedJSON);
-      setCopied(true);
-      toast({ title: "Copied to clipboard!" });
-      setTimeout(() => setCopied(false), 2000);
+      if (error) throw error;
+
+      toast({
+        title: "Name submitted successfully!",
+        description: "Your contribution is pending review. Thank you for preserving Ìgálá heritage!"
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        meaning: "",
+        pronunciation: "",
+        gender: "unisex",
+        category: "spiritual",
+        originStory: "",
+        relatedProverb: ""
+      });
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Submission failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const handleDownload = () => {
-    if (generatedJSON) {
-      const blob = new Blob([generatedJSON], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${formData.name.toLowerCase()}-contribution.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-  };
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="w-12 h-12 border-4 border-igala-gold/30 border-t-igala-gold rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Back Link - Top Left */}
-      <div className="container mx-auto max-w-3xl px-4 py-6">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
-        >
-          ← Back to Names Explorer
-        </Link>
-      </div>
+      <Header />
       
       {/* Hero */}
       <section 
-        className="relative py-16 px-4"
+        className="relative py-16 px-4 pt-28"
         style={{ background: 'linear-gradient(135deg, hsl(78, 52%, 32%) 0%, hsl(38, 91%, 55%) 100%)' }}
       >
         <div className="absolute inset-0 bg-black/10" />
@@ -199,38 +218,28 @@ const Contribute = () => {
               />
             </div>
 
-            <Button type="submit" variant="cultural" size="lg" className="w-full">
-              <Sparkles className="w-5 h-5 mr-2" />
-              Generate JSON Contribution
+            <Button type="submit" variant="cultural" size="lg" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                <>
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Submit Name for Review
+                </>
+              )}
             </Button>
           </form>
 
-          {/* Generated JSON Output */}
-          {generatedJSON && (
-            <div className="mt-8 bg-card rounded-2xl p-6 shadow-elegant border border-border/50">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-display text-lg font-semibold text-foreground">Your Contribution</h3>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" onClick={handleCopy}>
-                    {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                    {copied ? "Copied" : "Copy"}
-                  </Button>
-                  <Button variant="outline" size="sm" onClick={handleDownload}>
-                    <Download className="w-4 h-4" />
-                    Download
-                  </Button>
-                </div>
-              </div>
-              <pre className="bg-muted rounded-lg p-4 overflow-x-auto text-sm text-foreground">
-                {generatedJSON}
-              </pre>
-              <p className="text-muted-foreground text-sm mt-4">
-                Share this JSON with the project maintainers to have your name added to the database.
-              </p>
-            </div>
-          )}
+          <p className="text-center text-muted-foreground text-sm mt-6">
+            Your submission will be reviewed by our team before being added to the database.
+          </p>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 };
