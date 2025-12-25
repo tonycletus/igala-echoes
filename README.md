@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://igalaechoes.vercel.app
+**URL**: https://igala-echoes.vercel.app
 
 ## About Igala Echoes
 
@@ -60,4 +60,4 @@ This project is built with:
 
 ## How can I deploy this project?
 
-This project is deployed on Vercel at https://igalaechoes.vercel.app
+This project is deployed on Vercel at https://igala-echoes.vercel.app
