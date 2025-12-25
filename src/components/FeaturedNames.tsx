@@ -14,8 +14,8 @@ const FeaturedNames = ({ names, onSelectName, onExploreAll }: FeaturedNamesProps
   // Get the 3 most recent names (simulating "recently added/updated within last 7 days")
   // Since we don't have timestamps in the data, we'll use the last 3 names as "recent"
   const featuredNames = useMemo(() => {
-    // Take the last 3 names from the array (most recently added)
-    return names.slice(-3).reverse();
+    // Take the last 6 names from the array (most recently added)
+    return names.slice(-6).reverse();
   }, [names]);
 
   return (
@@ -49,7 +49,7 @@ const FeaturedNames = ({ names, onSelectName, onExploreAll }: FeaturedNamesProps
               {/* Background Pattern */}
               <div className="absolute inset-0 rounded-2xl" style={{ background: 'linear-gradient(135deg, hsl(25, 40%, 10%) 0%, hsl(20, 35%, 18%) 100%)' }} />
               <div className="absolute inset-0 opacity-10 pattern-igala rounded-2xl" />
-              
+
               {/* Content */}
               <div className="relative p-8 min-h-[320px] flex flex-col justify-between">
                 {/* Number Badge */}
@@ -90,9 +90,9 @@ const FeaturedNames = ({ names, onSelectName, onExploreAll }: FeaturedNamesProps
 
         {/* View All Button */}
         <div className="text-center">
-          <Button 
-            variant="outline" 
-            size="lg" 
+          <Button
+            variant="outline"
+            size="lg"
             className="rounded-full"
             onClick={onExploreAll}
           >

@@ -39,7 +39,8 @@ const Index = () => {
     });
   }, [data.names, searchQuery, selectedCategory, selectedGender]);
 
-  const displayedNames = showAllNames ? filteredNames : filteredNames.slice(0, 3);
+  const isFiltering = Boolean(searchQuery || selectedCategory || selectedGender);
+  const displayedNames = showAllNames || isFiltering ? filteredNames : [];
 
   const handleSelectName = (name: IgalaName) => {
     setSelectedName(name);
@@ -85,18 +86,30 @@ const Index = () => {
           </div>
 
           {/* Results Count */}
-          <div className="mb-8">
-            <p className="text-sm text-muted-foreground text-center">
-              Showing{" "}
-              <span className="font-semibold text-foreground">
-                {displayedNames.length}
-              </span>
-              {" of "}
-              <span className="font-semibold text-foreground">{filteredNames.length}</span>
-              {" names"}
-              {(searchQuery || selectedCategory || selectedGender) && " matching your search"}
-            </p>
-          </div>
+          {displayedNames.length > 0 && (
+            <div className="mb-8 flex flex-col items-center gap-2">
+              {showAllNames && filteredNames.length > 3 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="rounded-full text-muted-foreground hover:text-foreground mb-2"
+                  onClick={() => setShowAllNames(false)}
+                >
+                  Show Less
+                </Button>
+              )}
+              <p className="text-sm text-muted-foreground text-center">
+                Showing{" "}
+                <span className="font-semibold text-foreground">
+                  {displayedNames.length}
+                </span>
+                {" of "}
+                <span className="font-semibold text-foreground">{filteredNames.length}</span>
+                {" names"}
+                {(searchQuery || selectedCategory || selectedGender) && " matching your search"}
+              </p>
+            </div>
+          )}
 
           {/* Names Grid */}
           {filteredNames.length > 0 ? (
@@ -158,9 +171,9 @@ const Index = () => {
       <Hero onExploreClick={scrollToExplore} />
 
       {/* Featured Names */}
-      <FeaturedNames 
-        names={data.names} 
-        onSelectName={handleSelectName} 
+      <FeaturedNames
+        names={data.names}
+        onSelectName={handleSelectName}
         onExploreAll={() => {
           setShowAllNames(true);
           exploreRef.current?.scrollIntoView({ behavior: "smooth" });

@@ -3,6 +3,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Category, IgalaName } from "@/types/names";
 import { Search, Filter, X } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface SearchFiltersProps {
   searchQuery: string;
@@ -137,9 +144,8 @@ const SearchFilters = ({
               <button
                 key={name.id}
                 onClick={() => handleSelectSuggestion(name)}
-                className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-muted/50 transition-colors ${
-                  index === focusedIndex ? "bg-muted/50" : ""
-                }`}
+                className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-muted/50 transition-colors ${index === focusedIndex ? "bg-muted/50" : ""
+                  }`}
               >
                 <div>
                   <span className="font-semibold text-foreground">{name.name}</span>
@@ -152,67 +158,59 @@ const SearchFilters = ({
         )}
       </div>
 
-      {/* Filter Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-3">
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mr-2">
-          <Filter className="w-4 h-4" />
-          <span>Filters:</span>
+      {/* Filters Row */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex items-center gap-2 w-full sm:w-auto">
+          <Select
+            value={selectedCategory || "all"}
+            onValueChange={(value) => onCategoryChange(value === "all" ? null : value)}
+          >
+            <SelectTrigger className="w-full sm:w-[180px] rounded-xl border-border/50 bg-card/50">
+              <SelectValue placeholder="Category" />
+            </SelectTrigger>
+            <SelectContent className="max-h-[300px]">
+              <SelectItem value="all">All Categories</SelectItem>
+              {categories.map((category) => (
+                <SelectItem key={category.id} value={category.id}>
+                  {category.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Select
+            value={selectedGender || "all"}
+            onValueChange={(value) => onGenderChange(value === "all" ? null : value)}
+          >
+            <SelectTrigger className="w-full sm:w-[150px] rounded-xl border-border/50 bg-card/50">
+              <SelectValue placeholder="Gender" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Genders</SelectItem>
+              {genders.map((gender) => (
+                <SelectItem key={gender.id} value={gender.id}>
+                  {gender.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
-
-        {/* Category Filters */}
-        {categories.map((category) => (
-          <Button
-            key={category.id}
-            variant={selectedCategory === category.id ? "default" : "outline"}
-            size="sm"
-            onClick={() => onCategoryChange(selectedCategory === category.id ? null : category.id)}
-            className={`rounded-full ${
-              selectedCategory === category.id
-                ? "bg-igala-gold text-foreground hover:bg-igala-gold/90"
-                : "hover:border-igala-gold/50 hover:text-igala-amber"
-            }`}
-          >
-            {category.name}
-          </Button>
-        ))}
-
-        <div className="w-px h-6 bg-border/50 mx-2" />
-
-        {/* Gender Filters */}
-        {genders.map((gender) => (
-          <Button
-            key={gender.id}
-            variant={selectedGender === gender.id ? "default" : "outline"}
-            size="sm"
-            onClick={() => onGenderChange(selectedGender === gender.id ? null : gender.id)}
-            className={`rounded-full ${
-              selectedGender === gender.id
-                ? "bg-igala-coral text-accent-foreground hover:bg-igala-coral/90"
-                : "hover:border-igala-coral/50 hover:text-igala-coral"
-            }`}
-          >
-            {gender.label}
-          </Button>
-        ))}
 
         {/* Clear All */}
         {hasActiveFilters && (
-          <>
-            <div className="w-px h-6 bg-border/50 mx-2" />
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                onSearchChange("");
-                onCategoryChange(null);
-                onGenderChange(null);
-              }}
-              className="text-muted-foreground hover:text-destructive"
-            >
-              <X className="w-4 h-4 mr-1" />
-              Clear all
-            </Button>
-          </>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              onSearchChange("");
+              onCategoryChange(null);
+              onGenderChange(null);
+            }}
+            className="text-muted-foreground hover:text-destructive shrink-0"
+          >
+            <X className="w-4 h-4 mr-1" />
+            Clear filters
+          </Button>
         )}
       </div>
     </div>
