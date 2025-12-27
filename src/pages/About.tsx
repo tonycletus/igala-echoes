@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, BookOpen, Users, Globe, Sparkle } from "lucide-react";
+import { Heart, BookOpen, Users, Globe, Sparkle, Award } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const About = () => {
@@ -7,23 +7,23 @@ const About = () => {
     <main className="min-h-screen bg-background">
       {/* Back Link - Top Left */}
       <div className="container mx-auto max-w-4xl px-4 py-6">
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="inline-flex items-center gap-2 text-igala-coral hover:text-igala-coral/80 font-medium transition-colors"
         >
           ← Back to Names Explorer
         </Link>
       </div>
-      
+
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-20 px-4"
         style={{ background: 'linear-gradient(135deg, hsl(38, 91%, 55%) 0%, hsl(32, 85%, 52%) 50%, hsl(15, 79%, 55%) 100%)' }}
       >
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto max-w-4xl relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6">
-           <Sparkle className="w-4 h-4 text-white" />
+            <Sparkle className="w-4 h-4 text-white" />
             <span className="text-white/90 text-sm font-medium">Our Mission</span>
           </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -45,12 +45,12 @@ const About = () => {
                 Why Names Matter
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                In Igala culture, a name is not merely an identifier, it is a prophecy, a prayer, a piece of ancestral wisdom 
+                In Igala culture, a name is not merely an identifier, it is a prophecy, a prayer, a piece of ancestral wisdom
                 passed down through generations. When an Igala elder names a child, they speak destiny into existence.
               </p>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                <strong className="text-foreground">Igala Echoes</strong> exists to ensure these sacred traditions survive 
-                the test of time. As our world rapidly digitizes, we believe oral heritage must find its place in the 
+                <strong className="text-foreground">Igala Echoes</strong> exists to ensure these sacred traditions survive
+                the test of time. As our world rapidly digitizes, we believe oral heritage must find its place in the
                 digital archive accessible to every Igala person, wherever they may be.
               </p>
             </div>
@@ -60,7 +60,7 @@ const About = () => {
                 <BookOpen className="w-8 h-8 md:w-10 md:h-10 text-igala-olive mb-3" />
                 <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2">Oral Heritage</h3>
                 <p className="text-muted-foreground text-sm md:text-base">
-                  For centuries, Igala wisdom was passed from mouth to ear, elder to child, generation to generation. 
+                  For centuries, Igala wisdom was passed from mouth to ear, elder to child, generation to generation.
                   We honor this tradition while ensuring it endures in new forms.
                 </p>
               </div>
@@ -69,10 +69,47 @@ const About = () => {
                 <Globe className="w-8 h-8 md:w-10 md:h-10 text-igala-gold mb-3" />
                 <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2">Digital Preservation</h3>
                 <p className="text-muted-foreground text-sm md:text-base">
-                  By documenting names, meanings, pronunciations, and stories, we create a living archive that 
+                  By documenting names, meanings, pronunciations, and stories, we create a living archive that
                   connects the Igala diaspora to their roots.
                 </p>
               </div>
+            </div>
+
+            {/* Acknowledgments Section */}
+            <div className="bg-gradient-to-br from-igala-gold/10 to-igala-coral/10 rounded-2xl p-6 md:p-8 shadow-elegant border border-igala-gold/30 mb-10">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
+                <Award className="w-6 h-6 md:w-8 md:h-8 text-igala-gold" />
+                Scholarly Acknowledgments
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+                The compilation of Igala names on this website is based on extensive research and scholarly contributions by distinguished academics and cultural preservationists:
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-card/80 backdrop-blur-sm rounded-xl p-5 border border-border/50">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                    Professor Cletus Monday Oyidi, PhD
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Distinguished Scholar and Senior Lecturer at Taraba State University, Nigeria.
+                    Former Faculty Member at Kogi State University and Kogi State College of Education.
+                  </p>
+                </div>
+
+                <div className="bg-card/80 backdrop-blur-sm rounded-xl p-5 border border-border/50">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                    Ayegba Abdullahi Aduojoh
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Founder of Igala Identity Group. MTech in Space Science and Technology from the
+                    National Space Research and Development Agency (NASRDA).
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground text-sm mt-6 italic">
+                We are deeply grateful for their dedication to preserving and documenting Igala cultural heritage.
+              </p>
             </div>
 
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-elegant border border-border/50">
@@ -81,8 +118,8 @@ const About = () => {
                 Join the Movement
               </h2>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                This is more than an app, it is a movement. Every name you explore, share, or contribute helps 
-                preserve Igala identity for future generations. Whether you're naming a child, reconnecting with 
+                This is more than an app, it is a movement. Every name you explore, share, or contribute helps
+                preserve Igala identity for future generations. Whether you're naming a child, reconnecting with
                 your heritage, or simply curious about this rich culture, you are part of something larger.
               </p>
               <blockquote className="border-l-4 border-igala-gold pl-4 md:pl-6 py-2 italic text-foreground text-base md:text-xl">

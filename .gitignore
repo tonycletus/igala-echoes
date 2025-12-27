@@ -7,6 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+scripts/improved_names.json
+scripts/merge_names.cjs
+scripts/process_names.cjs
+scripts/process_names2.cjs
+
+
 node_modules
 dist
 dist-ssr
